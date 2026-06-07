@@ -176,17 +176,19 @@ async def finish_test(target: Message, state: FSMContext):
     await state.clear()
 
     if lang == "uz":
+        msg1 = "Zo'r natija! Davom eting! 💪" if final_score >= 80 else "Ertaga yanada yaxshi bo'ladi! 🌅"
         text = (
             f"{emoji} <b>Test yakunlandi!</b>\n\n"
             f"Natija: <b>{final_score}%</b>\n\n"
-            f"{'Zo\'r natija! Davom eting! 💪' if final_score >= 80 else 'Ertaga yanada yaxshi bo\'ladi! 🌅'}\n\n"
+            f"{msg1}\n\n"
             f"Keyingi dars — erta tongda 🌅"
         )
     else:
+        msg2 = "Отлично! Так держать! 💪" if final_score >= 80 else "Завтра будет лучше! 🌅"
         text = (
             f"{emoji} <b>Тест завершён!</b>\n\n"
             f"Результат: <b>{final_score}%</b>\n\n"
-            f"{'Отлично! Так держать! 💪' if final_score >= 80 else 'Завтра будет лучше! 🌅'}\n\n"
+            f"{msg2}\n\n"
             f"Следующий урок — завтра утром 🌅"
         )
     await target.answer(text, parse_mode="HTML")
