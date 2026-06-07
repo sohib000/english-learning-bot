@@ -1,0 +1,68 @@
+{
+  "id": 10,
+  "level": 1,
+  "title": "At School",
+  "words": [
+    {
+      "en": "school",
+      "uz": "maktab",
+      "ru": "школа"
+    },
+    {
+      "en": "learn",
+      "uz": "o'rganmoq",
+      "ru": "учиться"
+    },
+    {
+      "en": "teacher",
+      "uz": "o'qituvchi",
+      "ru": "учитель"
+    },
+    {
+      "en": "student",
+      "uz": "o'quvchi",
+      "ru": "ученик"
+    },
+    {
+      "en": "class",
+      "uz": "sinf",
+      "ru": "класс"
+    },
+    {
+      "en": "write",
+      "uz": "yozmoq",
+      "ru": "писать"
+    },
+    {
+      "en": "answer",
+      "uz": "javob bermoq",
+      "ru": "отвечать"
+    },
+    {
+      "en": "question",
+      "uz": "savol",
+      "ru": "вопрос"
+    },
+    {
+      "en": "study",
+      "uz": "o'qimoq",
+      "ru": "учить"
+    },
+    {
+      "en": "know",
+      "uz": "bilmoq",
+      "ru": "знать"
+    }
+  ],
+  "text_en": "I study English at school every day. The teacher asks a question and I write the answer.",
+  "text_uz": "Men har kuni maktabda ingliz tilini o'qiyman. O'qituvchi savol beradi va men javobni yozaman.",
+  "text_ru": "Я учу английский в школе каждый день. Учитель задаёт вопрос и я пишу ответ.",
+  "audio": "lesson_010.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I ____ English at school every day.",
+      "answer": "study"
+    }
+  ]
+}

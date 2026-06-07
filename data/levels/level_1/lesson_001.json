@@ -1,0 +1,28 @@
+{
+  "id": 1,
+  "level": 1,
+  "title": "Morning Routine",
+  "words": [
+    {"en": "wake up", "uz": "uyg'onmoq", "ru": "просыпаться"},
+    {"en": "early",   "uz": "erta",      "ru": "рано"},
+    {"en": "drink",   "uz": "ichmoq",    "ru": "пить"},
+    {"en": "coffee",  "uz": "qahva",     "ru": "кофе"},
+    {"en": "work",    "uz": "ish",       "ru": "работа"},
+    {"en": "friend",  "uz": "do'st",     "ru": "друг"},
+    {"en": "call",    "uz": "qo'ng'iroq qilmoq", "ru": "звонить"},
+    {"en": "morning", "uz": "tong",      "ru": "утро"},
+    {"en": "every",   "uz": "har",       "ru": "каждый"},
+    {"en": "before",  "uz": "oldin",     "ru": "до"}
+  ],
+  "text_en": "I wake up early and drink coffee before work. My friend calls me every morning.",
+  "text_uz": "Men ishdan oldin erta uyg'onib qahva ichaman. Do'stim har tong menga qo'ng'iroq qiladi.",
+  "text_ru": "Я просыпаюсь рано и пью кофе до работы. Мой друг звонит мне каждое утро.",
+  "audio": "lesson_001.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I wake up _____ and drink coffee.",
+      "answer": "early"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": 7,
+  "level": 1,
+  "title": "Shopping",
+  "words": [
+    {
+      "en": "shop",
+      "uz": "do'kon",
+      "ru": "магазин"
+    },
+    {
+      "en": "buy",
+      "uz": "sotib olmoq",
+      "ru": "покупать"
+    },
+    {
+      "en": "sell",
+      "uz": "sotmoq",
+      "ru": "продавать"
+    },
+    {
+      "en": "price",
+      "uz": "narx",
+      "ru": "цена"
+    },
+    {
+      "en": "money",
+      "uz": "pul",
+      "ru": "деньги"
+    },
+    {
+      "en": "cheap",
+      "uz": "arzon",
+      "ru": "дешёвый"
+    },
+    {
+      "en": "expensive",
+      "uz": "qimmat",
+      "ru": "дорогой"
+    },
+    {
+      "en": "pay",
+      "uz": "to'lamoq",
+      "ru": "платить"
+    },
+    {
+      "en": "need",
+      "uz": "kerak",
+      "ru": "нужно"
+    },
+    {
+      "en": "clothes",
+      "uz": "kiyim",
+      "ru": "одежда"
+    }
+  ],
+  "text_en": "I go to the shop to buy clothes. The price is cheap so I pay and take it.",
+  "text_uz": "Kiyim sotib olish uchun do'konga boraman. Narxi arzon, shuning uchun to'lab olaman.",
+  "text_ru": "Я иду в магазин купить одежду. Цена дешёвая, поэтому я плачу и беру.",
+  "audio": "lesson_007.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "The price is ____ so I pay.",
+      "answer": "cheap"
+    }
+  ]
+}

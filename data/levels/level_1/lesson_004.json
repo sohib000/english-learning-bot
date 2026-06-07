@@ -1,0 +1,68 @@
+{
+  "id": 4,
+  "level": 1,
+  "title": "My Family",
+  "words": [
+    {
+      "en": "family",
+      "uz": "oila",
+      "ru": "семья"
+    },
+    {
+      "en": "mother",
+      "uz": "ona",
+      "ru": "мама"
+    },
+    {
+      "en": "father",
+      "uz": "ota",
+      "ru": "папа"
+    },
+    {
+      "en": "brother",
+      "uz": "aka/uka",
+      "ru": "брат"
+    },
+    {
+      "en": "sister",
+      "uz": "opa/singil",
+      "ru": "сестра"
+    },
+    {
+      "en": "son",
+      "uz": "o'g'il",
+      "ru": "сын"
+    },
+    {
+      "en": "daughter",
+      "uz": "qiz",
+      "ru": "дочь"
+    },
+    {
+      "en": "love",
+      "uz": "sevmoq",
+      "ru": "любить"
+    },
+    {
+      "en": "together",
+      "uz": "birga",
+      "ru": "вместе"
+    },
+    {
+      "en": "happy",
+      "uz": "baxtli",
+      "ru": "счастливый"
+    }
+  ],
+  "text_en": "My family is happy together. I love my mother and father very much.",
+  "text_uz": "Mening oilam birga baxtli. Men onam va otamni juda sevaman.",
+  "text_ru": "Моя семья счастлива вместе. Я очень люблю свою маму и папу.",
+  "audio": "lesson_004.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "My family is ____ together.",
+      "answer": "happy"
+    }
+  ]
+}

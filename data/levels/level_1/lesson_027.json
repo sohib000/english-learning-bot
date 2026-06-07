@@ -1,0 +1,68 @@
+{
+  "id": 27,
+  "level": 1,
+  "title": "Money and Finance",
+  "words": [
+    {
+      "en": "price",
+      "uz": "narx",
+      "ru": "цена"
+    },
+    {
+      "en": "cost",
+      "uz": "qiymat",
+      "ru": "стоимость"
+    },
+    {
+      "en": "save",
+      "uz": "tejash",
+      "ru": "экономить"
+    },
+    {
+      "en": "spend",
+      "uz": "sarflamoq",
+      "ru": "тратить"
+    },
+    {
+      "en": "earn",
+      "uz": "ishlash",
+      "ru": "зарабатывать"
+    },
+    {
+      "en": "borrow",
+      "uz": "qarz olmoq",
+      "ru": "занимать"
+    },
+    {
+      "en": "lend",
+      "uz": "qarz bermoq",
+      "ru": "одалживать"
+    },
+    {
+      "en": "wallet",
+      "uz": "hamyon",
+      "ru": "кошелёк"
+    },
+    {
+      "en": "cash",
+      "uz": "naqd pul",
+      "ru": "наличные"
+    },
+    {
+      "en": "card",
+      "uz": "karta",
+      "ru": "карта"
+    }
+  ],
+  "text_en": "I save money every month. I spend less and earn more to reach my goals.",
+  "text_uz": "Men har oy pul tejayapman. Kamroq sarflayman va ko'proq ishlaymanki, maqsadlarimga erishay.",
+  "text_ru": "Каждый месяц я экономлю деньги. Я трачу меньше и зарабатываю больше чтобы достичь целей.",
+  "audio": "lesson_027.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I ____ money every month.",
+      "answer": "save"
+    }
+  ]
+}

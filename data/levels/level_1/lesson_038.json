@@ -1,0 +1,218 @@
+{
+  "id": 38,
+  "level": 1,
+  "title": "A Wedding Celebration",
+  "words": [
+    {
+      "en": "wedding",
+      "uz": "to'y",
+      "ru": "свадьба"
+    },
+    {
+      "en": "bride",
+      "uz": "kelin",
+      "ru": "невеста"
+    },
+    {
+      "en": "groom",
+      "uz": "kuyov",
+      "ru": "жених"
+    },
+    {
+      "en": "ceremony",
+      "uz": "marosim",
+      "ru": "церемония"
+    },
+    {
+      "en": "reception",
+      "uz": "qabul",
+      "ru": "приём"
+    },
+    {
+      "en": "guest",
+      "uz": "mehmon",
+      "ru": "гость"
+    },
+    {
+      "en": "invitation",
+      "uz": "taklif",
+      "ru": "приглашение"
+    },
+    {
+      "en": "dress",
+      "uz": "ko'ylak",
+      "ru": "платье"
+    },
+    {
+      "en": "suit",
+      "uz": "kostyum",
+      "ru": "костюм"
+    },
+    {
+      "en": "ring",
+      "uz": "uzuk",
+      "ru": "кольцо"
+    },
+    {
+      "en": "vow",
+      "uz": "va'da",
+      "ru": "клятва"
+    },
+    {
+      "en": "hall",
+      "uz": "zal",
+      "ru": "зал"
+    },
+    {
+      "en": "dance",
+      "uz": "raqs",
+      "ru": "танец"
+    },
+    {
+      "en": "music",
+      "uz": "musiqa",
+      "ru": "музыка"
+    },
+    {
+      "en": "band",
+      "uz": "ansambli",
+      "ru": "оркестр"
+    },
+    {
+      "en": "song",
+      "uz": "qo'shiq",
+      "ru": "песня"
+    },
+    {
+      "en": "cake",
+      "uz": "tort",
+      "ru": "торт"
+    },
+    {
+      "en": "flower",
+      "uz": "gul",
+      "ru": "цветок"
+    },
+    {
+      "en": "bouquet",
+      "uz": "guldasta",
+      "ru": "букет"
+    },
+    {
+      "en": "photograph",
+      "uz": "surat",
+      "ru": "фотография"
+    },
+    {
+      "en": "photographer",
+      "uz": "fotograf",
+      "ru": "фотограф"
+    },
+    {
+      "en": "memory",
+      "uz": "xotira",
+      "ru": "память"
+    },
+    {
+      "en": "celebrate",
+      "uz": "nishonlamoq",
+      "ru": "праздновать"
+    },
+    {
+      "en": "toast",
+      "uz": "tost",
+      "ru": "тост"
+    },
+    {
+      "en": "speech",
+      "uz": "nutq",
+      "ru": "речь"
+    },
+    {
+      "en": "emotion",
+      "uz": "tuyg'u",
+      "ru": "эмоция"
+    },
+    {
+      "en": "happy",
+      "uz": "baxtli",
+      "ru": "счастливый"
+    },
+    {
+      "en": "cry",
+      "uz": "yig'lamoq",
+      "ru": "плакать"
+    },
+    {
+      "en": "smile",
+      "uz": "jilmaymoq",
+      "ru": "улыбаться"
+    },
+    {
+      "en": "hug",
+      "uz": "quchoqlamoq",
+      "ru": "обнимать"
+    },
+    {
+      "en": "congratulate",
+      "uz": "tabriklamoq",
+      "ru": "поздравлять"
+    },
+    {
+      "en": "gift",
+      "uz": "sovg'a",
+      "ru": "подарок"
+    },
+    {
+      "en": "tradition",
+      "uz": "an'ana",
+      "ru": "традиция"
+    },
+    {
+      "en": "culture",
+      "uz": "madaniyat",
+      "ru": "культура"
+    },
+    {
+      "en": "family",
+      "uz": "oila",
+      "ru": "семья"
+    },
+    {
+      "en": "relative",
+      "uz": "qarindosh",
+      "ru": "родственник"
+    },
+    {
+      "en": "friend",
+      "uz": "do'st",
+      "ru": "друг"
+    },
+    {
+      "en": "together",
+      "uz": "birga",
+      "ru": "вместе"
+    },
+    {
+      "en": "love",
+      "uz": "sevgi",
+      "ru": "любовь"
+    },
+    {
+      "en": "beautiful",
+      "uz": "chiroyli",
+      "ru": "красивый"
+    }
+  ],
+  "text_en": "Last Saturday I went to my cousin's wedding. The ceremony was held in a beautiful hall decorated with white flowers. The bride wore a long white dress and the groom wore a dark blue suit. They exchanged rings and said their vows in front of all the family and friends. After the ceremony the reception began with music from a live band. Everyone danced and sang along to the love songs. The wedding cake was five layers tall and beautifully decorated with fresh flowers. The photographer took many wonderful pictures of the happy couple and all the guests. Many relatives and friends gave emotional speeches and toasts. I congratulated the couple and gave them a special gift. The whole evening was filled with joy emotion and beautiful memories that everyone will keep forever.",
+  "text_uz": "O'tgan shanba kuzinimning to'yiga bordim. Marosim oq gullar bilan bezatilgan chiroyli zalda bo'ldi. Kelin uzun oq ko'ylak kuyov esa to'q ko'k kostyum kiydi. Ular barcha oila va do'stlari oldida uzuk almashtirib va'da berishdi. Marosimdan keyin jonli ansambli musiqasi bilan qabul boshlandi. Hamma raqs tushib sevgi qo'shiqlarini kuyladi. To'y torti besh qavatli va yangi gullar bilan bezatilgan edi. Fotograf baxtli juft va barcha mehmonlarning ajoyib suratlarini oldi. Ko'p qarindosh va do'stlar hissiy nutq va tostlar aytdi. Men juftni tabriklap maxsus sovg'a berdim.",
+  "text_ru": "В прошлую субботу я был на свадьбе кузины. Церемония проходила в красивом зале украшенном белыми цветами. Невеста была в длинном белом платье жених в тёмно-синем костюме. Они обменялись кольцами и произнесли клятвы. После церемонии начался приём с живой музыкой. Все танцевали и пели. Свадебный торт был пятиярусным. Фотограф сделал много снимков. Родственники произносили тосты. Я поздравил молодых и подарил подарок. Весь вечер был наполнен радостью и красивыми воспоминаниями.",
+  "audio": "lesson_038.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Last Saturday I went to my cousin's wedding.",
+      "answer": "wedding"
+    }
+  ]
+}

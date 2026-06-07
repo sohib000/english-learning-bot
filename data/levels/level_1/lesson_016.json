@@ -1,0 +1,68 @@
+{
+  "id": 16,
+  "level": 1,
+  "title": "Transportation",
+  "words": [
+    {
+      "en": "train",
+      "uz": "poyezd",
+      "ru": "поезд"
+    },
+    {
+      "en": "plane",
+      "uz": "samolyot",
+      "ru": "самолёт"
+    },
+    {
+      "en": "ship",
+      "uz": "kema",
+      "ru": "корабль"
+    },
+    {
+      "en": "ticket",
+      "uz": "chipta",
+      "ru": "билет"
+    },
+    {
+      "en": "station",
+      "uz": "stansiya",
+      "ru": "станция"
+    },
+    {
+      "en": "airport",
+      "uz": "aeroport",
+      "ru": "аэропорт"
+    },
+    {
+      "en": "driver",
+      "uz": "haydovchi",
+      "ru": "водитель"
+    },
+    {
+      "en": "seat",
+      "uz": "o'rindiq",
+      "ru": "место"
+    },
+    {
+      "en": "travel",
+      "uz": "sayohat",
+      "ru": "путешествие"
+    },
+    {
+      "en": "trip",
+      "uz": "safar",
+      "ru": "поездка"
+    }
+  ],
+  "text_en": "I buy a ticket at the station and travel by train. It is a long trip.",
+  "text_uz": "Men stansiyada chipta sotib olaman va poyezdda sayohat qilaman. Bu uzoq safar.",
+  "text_ru": "Я покупаю билет на станции и еду на поезде. Это долгая поездка.",
+  "audio": "lesson_016.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I buy a ____ at the station.",
+      "answer": "ticket"
+    }
+  ]
+}

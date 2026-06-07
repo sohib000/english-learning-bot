@@ -1,0 +1,68 @@
+{
+  "id": 20,
+  "level": 1,
+  "title": "House Chores",
+  "words": [
+    {
+      "en": "wash",
+      "uz": "yuvmoq",
+      "ru": "мыть"
+    },
+    {
+      "en": "clean",
+      "uz": "tozalamoq",
+      "ru": "убирать"
+    },
+    {
+      "en": "cook",
+      "uz": "pishirmoq",
+      "ru": "готовить"
+    },
+    {
+      "en": "iron",
+      "uz": "dazmollamoq",
+      "ru": "гладить"
+    },
+    {
+      "en": "sweep",
+      "uz": "supurmoq",
+      "ru": "мести"
+    },
+    {
+      "en": "fix",
+      "uz": "tuzatmoq",
+      "ru": "чинить"
+    },
+    {
+      "en": "garden",
+      "uz": "bog'",
+      "ru": "сад"
+    },
+    {
+      "en": "dust",
+      "uz": "chang artmoq",
+      "ru": "вытирать пыль"
+    },
+    {
+      "en": "tidy",
+      "uz": "tartibga solmoq",
+      "ru": "приводить в порядок"
+    },
+    {
+      "en": "help",
+      "uz": "yordam bermoq",
+      "ru": "помогать"
+    }
+  ],
+  "text_en": "Every weekend I clean the house, wash the dishes, and cook dinner. My children help me.",
+  "text_uz": "Har dam olish kunida uyni tozalayman, idishlarni yuvaman va kechki ovqat pishiraman. Bolalarim menga yordam beradi.",
+  "text_ru": "Каждые выходные я убираю дом, мою посуду и готовлю ужин. Мои дети помогают мне.",
+  "audio": "lesson_020.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "My children ____ me.",
+      "answer": "help"
+    }
+  ]
+}

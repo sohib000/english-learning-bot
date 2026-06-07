@@ -1,0 +1,68 @@
+{
+  "id": 2,
+  "level": 1,
+  "title": "At Home",
+  "words": [
+    {
+      "en": "home",
+      "uz": "uy",
+      "ru": "дом"
+    },
+    {
+      "en": "room",
+      "uz": "xona",
+      "ru": "комната"
+    },
+    {
+      "en": "kitchen",
+      "uz": "oshxona",
+      "ru": "кухня"
+    },
+    {
+      "en": "bed",
+      "uz": "karavot",
+      "ru": "кровать"
+    },
+    {
+      "en": "door",
+      "uz": "eshik",
+      "ru": "дверь"
+    },
+    {
+      "en": "window",
+      "uz": "deraza",
+      "ru": "окно"
+    },
+    {
+      "en": "table",
+      "uz": "stol",
+      "ru": "стол"
+    },
+    {
+      "en": "chair",
+      "uz": "stul",
+      "ru": "стул"
+    },
+    {
+      "en": "clean",
+      "uz": "toza",
+      "ru": "чистый"
+    },
+    {
+      "en": "open",
+      "uz": "ochmoq",
+      "ru": "открывать"
+    }
+  ],
+  "text_en": "I clean my room every day. The kitchen has a big table and two chairs.",
+  "text_uz": "Men har kuni xonamni tozalayman. Oshxonada katta stol va ikkita stul bor.",
+  "text_ru": "Я убираю свою комнату каждый день. На кухне большой стол и два стула.",
+  "audio": "lesson_002.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I ____ my room every day.",
+      "answer": "clean"
+    }
+  ]
+}

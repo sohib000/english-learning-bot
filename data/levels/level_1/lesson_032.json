@@ -1,0 +1,218 @@
+{
+  "id": 32,
+  "level": 1,
+  "title": "Healthy Lifestyle",
+  "words": [
+    {
+      "en": "healthy",
+      "uz": "sog'lom",
+      "ru": "здоровый"
+    },
+    {
+      "en": "lifestyle",
+      "uz": "turmush tarzi",
+      "ru": "образ жизни"
+    },
+    {
+      "en": "diet",
+      "uz": "parhez",
+      "ru": "диета"
+    },
+    {
+      "en": "vegetable",
+      "uz": "sabzavot",
+      "ru": "овощ"
+    },
+    {
+      "en": "fruit",
+      "uz": "meva",
+      "ru": "фрукт"
+    },
+    {
+      "en": "protein",
+      "uz": "oqsil",
+      "ru": "белок"
+    },
+    {
+      "en": "vitamin",
+      "uz": "vitamin",
+      "ru": "витамин"
+    },
+    {
+      "en": "calorie",
+      "uz": "kaloriya",
+      "ru": "калория"
+    },
+    {
+      "en": "exercise",
+      "uz": "mashq",
+      "ru": "упражнение"
+    },
+    {
+      "en": "jogging",
+      "uz": "yugurish",
+      "ru": "бег"
+    },
+    {
+      "en": "stretch",
+      "uz": "cho'zmoq",
+      "ru": "растягиваться"
+    },
+    {
+      "en": "muscle",
+      "uz": "mushak",
+      "ru": "мышца"
+    },
+    {
+      "en": "weight",
+      "uz": "vazn",
+      "ru": "вес"
+    },
+    {
+      "en": "doctor",
+      "uz": "shifokor",
+      "ru": "врач"
+    },
+    {
+      "en": "check",
+      "uz": "tekshirmoq",
+      "ru": "проверять"
+    },
+    {
+      "en": "sugar",
+      "uz": "shakar",
+      "ru": "сахар"
+    },
+    {
+      "en": "fat",
+      "uz": "yog'",
+      "ru": "жир"
+    },
+    {
+      "en": "avoid",
+      "uz": "qochmoq",
+      "ru": "избегать"
+    },
+    {
+      "en": "portion",
+      "uz": "porsiya",
+      "ru": "порция"
+    },
+    {
+      "en": "breakfast",
+      "uz": "nonushta",
+      "ru": "завтрак"
+    },
+    {
+      "en": "hydrate",
+      "uz": "suvlanmoq",
+      "ru": "увлажнять"
+    },
+    {
+      "en": "immune",
+      "uz": "immunitet",
+      "ru": "иммунитет"
+    },
+    {
+      "en": "habit",
+      "uz": "odat",
+      "ru": "привычка"
+    },
+    {
+      "en": "reduce",
+      "uz": "kamaytirmoq",
+      "ru": "уменьшать"
+    },
+    {
+      "en": "increase",
+      "uz": "ko'paytirmoq",
+      "ru": "увеличивать"
+    },
+    {
+      "en": "energy",
+      "uz": "energiya",
+      "ru": "энергия"
+    },
+    {
+      "en": "rest",
+      "uz": "dam olish",
+      "ru": "отдых"
+    },
+    {
+      "en": "sleep",
+      "uz": "uxlash",
+      "ru": "сон"
+    },
+    {
+      "en": "stress",
+      "uz": "stress",
+      "ru": "стресс"
+    },
+    {
+      "en": "mental",
+      "uz": "ruhiy",
+      "ru": "психический"
+    },
+    {
+      "en": "balance",
+      "uz": "muvozanat",
+      "ru": "баланс"
+    },
+    {
+      "en": "fresh",
+      "uz": "yangi",
+      "ru": "свежий"
+    },
+    {
+      "en": "natural",
+      "uz": "tabiiy",
+      "ru": "натуральный"
+    },
+    {
+      "en": "organic",
+      "uz": "organik",
+      "ru": "органический"
+    },
+    {
+      "en": "medical",
+      "uz": "tibbiy",
+      "ru": "медицинский"
+    },
+    {
+      "en": "strength",
+      "uz": "kuch",
+      "ru": "сила"
+    },
+    {
+      "en": "flexible",
+      "uz": "egiluvchan",
+      "ru": "гибкий"
+    },
+    {
+      "en": "active",
+      "uz": "faol",
+      "ru": "активный"
+    },
+    {
+      "en": "goal",
+      "uz": "maqsad",
+      "ru": "цель"
+    },
+    {
+      "en": "progress",
+      "uz": "rivojlanish",
+      "ru": "прогресс"
+    }
+  ],
+  "text_en": "A healthy lifestyle is very important for a long and happy life. Every morning I wake up early and go jogging for thirty minutes. After jogging I stretch my muscles to stay flexible and strong. For breakfast I eat fresh fruit, vegetables, and food rich in protein and vitamins. I try to avoid too much sugar and fat because they add extra calories. I drink a lot of water every day to stay hydrated. My doctor says I should check my weight and reduce stress to keep my immune system strong. Good rest and enough sleep are also very important for mental balance and daily energy. I believe that small healthy habits lead to great progress over time.",
+  "text_uz": "Sog'lom turmush tarzi uzoq va baxtli hayot uchun juda muhimdir. Har kuni ertalab erta turib o'ttiz daqiqa yuguraman. Yugurgandan keyin egiluvchan va kuchli bo'lish uchun mushaklarimni cho'zaman. Nonushtaga yangi meva, sabzavot va oqsil hamda vitaminlarga boy ovqat yeyman. Ko'p shakar va yog'dan qochishga harakat qilaman, chunki ular ortiqcha kaloriya qo'shadi. Har kuni ko'p suv ichaman. Shifokorim immunitet tizimimni kuchli saqlash uchun vaznimni tekshirib, stressni kamaytirish kerakligini aytadi. Yaxshi dam olish va yetarli uxlash ham ruhiy muvozanat va kunlik energiya uchun muhimdir.",
+  "text_ru": "Здоровый образ жизни очень важен для долгой и счастливой жизни. Каждое утро я встаю рано и бегаю тридцать минут. После бега растягиваю мышцы чтобы оставаться гибким и сильным. На завтрак ем свежие фрукты, овощи и еду богатую белком и витаминами. Стараюсь избегать много сахара и жира потому что они добавляют лишние калории. Каждый день пью много воды. Врач говорит что нужно контролировать вес и снижать стресс. Хороший отдых и достаточный сон тоже очень важны для психического баланса и ежедневной энергии.",
+  "audio": "lesson_032.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "A healthy ____ is very important.",
+      "answer": "lifestyle"
+    }
+  ]
+}

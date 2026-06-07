@@ -1,0 +1,218 @@
+{
+  "id": 31,
+  "level": 1,
+  "title": "A Day at the Office",
+  "words": [
+    {
+      "en": "arrive",
+      "uz": "yetib kelmoq",
+      "ru": "прибывать"
+    },
+    {
+      "en": "desk",
+      "uz": "yozuv stoli",
+      "ru": "рабочий стол"
+    },
+    {
+      "en": "computer",
+      "uz": "kompyuter",
+      "ru": "компьютер"
+    },
+    {
+      "en": "email",
+      "uz": "elektron pochta",
+      "ru": "электронная почта"
+    },
+    {
+      "en": "reply",
+      "uz": "javob bermoq",
+      "ru": "отвечать"
+    },
+    {
+      "en": "meeting",
+      "uz": "yig'ilish",
+      "ru": "совещание"
+    },
+    {
+      "en": "colleague",
+      "uz": "hamkasb",
+      "ru": "коллега"
+    },
+    {
+      "en": "manager",
+      "uz": "menejer",
+      "ru": "менеджер"
+    },
+    {
+      "en": "task",
+      "uz": "vazifa",
+      "ru": "задание"
+    },
+    {
+      "en": "finish",
+      "uz": "tugatmoq",
+      "ru": "заканчивать"
+    },
+    {
+      "en": "break",
+      "uz": "tanaffus",
+      "ru": "перерыв"
+    },
+    {
+      "en": "lunch",
+      "uz": "tushlik",
+      "ru": "обед"
+    },
+    {
+      "en": "report",
+      "uz": "hisobot",
+      "ru": "отчёт"
+    },
+    {
+      "en": "deadline",
+      "uz": "muddat",
+      "ru": "дедлайн"
+    },
+    {
+      "en": "presentation",
+      "uz": "taqdimot",
+      "ru": "презентация"
+    },
+    {
+      "en": "client",
+      "uz": "mijoz",
+      "ru": "клиент"
+    },
+    {
+      "en": "sign",
+      "uz": "imzolamoq",
+      "ru": "подписывать"
+    },
+    {
+      "en": "document",
+      "uz": "hujjat",
+      "ru": "документ"
+    },
+    {
+      "en": "printer",
+      "uz": "printer",
+      "ru": "принтер"
+    },
+    {
+      "en": "schedule",
+      "uz": "jadval",
+      "ru": "расписание"
+    },
+    {
+      "en": "appointment",
+      "uz": "uchrashuv",
+      "ru": "встреча"
+    },
+    {
+      "en": "telephone",
+      "uz": "telefon",
+      "ru": "телефон"
+    },
+    {
+      "en": "conference",
+      "uz": "konferensiya",
+      "ru": "конференция"
+    },
+    {
+      "en": "budget",
+      "uz": "byudjet",
+      "ru": "бюджет"
+    },
+    {
+      "en": "profit",
+      "uz": "foyda",
+      "ru": "прибыль"
+    },
+    {
+      "en": "loss",
+      "uz": "zarar",
+      "ru": "убыток"
+    },
+    {
+      "en": "project",
+      "uz": "loyiha",
+      "ru": "проект"
+    },
+    {
+      "en": "team",
+      "uz": "jamoa",
+      "ru": "команда"
+    },
+    {
+      "en": "leader",
+      "uz": "rahbar",
+      "ru": "руководитель"
+    },
+    {
+      "en": "success",
+      "uz": "muvaffaqiyat",
+      "ru": "успех"
+    },
+    {
+      "en": "problem",
+      "uz": "muammo",
+      "ru": "проблема"
+    },
+    {
+      "en": "solution",
+      "uz": "yechim",
+      "ru": "решение"
+    },
+    {
+      "en": "idea",
+      "uz": "g'oya",
+      "ru": "идея"
+    },
+    {
+      "en": "plan",
+      "uz": "reja",
+      "ru": "план"
+    },
+    {
+      "en": "goal",
+      "uz": "maqsad",
+      "ru": "цель"
+    },
+    {
+      "en": "result",
+      "uz": "natija",
+      "ru": "результат"
+    },
+    {
+      "en": "improve",
+      "uz": "yaxshilamoq",
+      "ru": "улучшать"
+    },
+    {
+      "en": "change",
+      "uz": "o'zgartirmoq",
+      "ru": "изменять"
+    },
+    {
+      "en": "decision",
+      "uz": "qaror",
+      "ru": "решение"
+    },
+    {
+      "en": "important",
+      "uz": "muhim",
+      "ru": "важный"
+    }
+  ],
+  "text_en": "I arrive at the office at nine o'clock every morning. First I check my emails and reply to my colleagues and clients. At ten we have a team meeting where our manager gives everyone a task. I work on my project until lunch. After the break I prepare a report and a presentation for the client. The deadline is today so I must finish everything before five o'clock. My team leader says the result is important for the budget and profit of our company. I always try to find a good solution to every problem and share my ideas with the team.",
+  "text_uz": "Men har kuni ertalab soat to'qqizda ofisga yetib kelaman. Avval elektron pochtamni tekshirib, hamkasb va mijozlarimga javob beraman. O'nda menejerimiz hammaga vazifa beradigan jamoa yig'ilishi bo'ladi. Tushlikkacha loyiham ustida ishlayaman. Tanaffusdan keyin mijoz uchun hisobot va taqdimot tayyorlayman. Muddat bugun, shuning uchun soat beshtadan oldin hamma narsani tugatishim kerak. Jamoa rahbarim natija kompaniyamiz byudjeti va foydasi uchun muhim ekanini aytadi. Men doimo har bir muammoga yaxshi yechim topishga va g'oyalarimni jamoa bilan baham ko'rishga harakat qilaman.",
+  "text_ru": "Каждое утро я прихожу в офис в девять часов. Сначала проверяю почту и отвечаю коллегам и клиентам. В десять у нас совещание команды, где менеджер даёт каждому задание. До обеда я работаю над проектом. После перерыва готовлю отчёт и презентацию для клиента. Дедлайн сегодня, поэтому нужно закончить всё до пяти. Руководитель говорит, что результат важен для бюджета и прибыли компании. Я всегда стараюсь найти хорошее решение каждой проблемы и делиться идеями с командой.",
+  "audio": "lesson_031.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I arrive at the office at nine o'clock every ____.",
+      "answer": "morning"
+    }
+  ]
+}

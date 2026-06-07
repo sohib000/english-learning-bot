@@ -1,0 +1,68 @@
+{
+  "id": 8,
+  "level": 1,
+  "title": "Health",
+  "words": [
+    {
+      "en": "health",
+      "uz": "salomatlik",
+      "ru": "здоровье"
+    },
+    {
+      "en": "doctor",
+      "uz": "shifokor",
+      "ru": "врач"
+    },
+    {
+      "en": "sick",
+      "uz": "kasal",
+      "ru": "больной"
+    },
+    {
+      "en": "pain",
+      "uz": "og'riq",
+      "ru": "боль"
+    },
+    {
+      "en": "medicine",
+      "uz": "dori",
+      "ru": "лекарство"
+    },
+    {
+      "en": "hospital",
+      "uz": "kasalxona",
+      "ru": "больница"
+    },
+    {
+      "en": "rest",
+      "uz": "dam olmoq",
+      "ru": "отдыхать"
+    },
+    {
+      "en": "feel",
+      "uz": "his qilmoq",
+      "ru": "чувствовать"
+    },
+    {
+      "en": "better",
+      "uz": "yaxshiroq",
+      "ru": "лучше"
+    },
+    {
+      "en": "sleep",
+      "uz": "uxlamoq",
+      "ru": "спать"
+    }
+  ],
+  "text_en": "I feel sick today. The doctor gives me medicine and says I need to rest and sleep.",
+  "text_uz": "Bugun o'zim kasal his qilyapman. Shifokor menga dori beradi va dam olib uxlashim kerakligini aytadi.",
+  "text_ru": "Сегодня я чувствую себя больным. Врач даёт мне лекарство и говорит, что нужно отдыхать и спать.",
+  "audio": "lesson_008.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I feel ____ today.",
+      "answer": "sick"
+    }
+  ]
+}

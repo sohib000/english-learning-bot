@@ -1,0 +1,68 @@
+{
+  "id": 5,
+  "level": 1,
+  "title": "Going to Work",
+  "words": [
+    {
+      "en": "go",
+      "uz": "bormoq",
+      "ru": "идти"
+    },
+    {
+      "en": "bus",
+      "uz": "avtobus",
+      "ru": "автобус"
+    },
+    {
+      "en": "car",
+      "uz": "mashina",
+      "ru": "машина"
+    },
+    {
+      "en": "road",
+      "uz": "yo'l",
+      "ru": "дорога"
+    },
+    {
+      "en": "late",
+      "uz": "kech",
+      "ru": "поздно"
+    },
+    {
+      "en": "fast",
+      "uz": "tez",
+      "ru": "быстро"
+    },
+    {
+      "en": "walk",
+      "uz": "yurmoq",
+      "ru": "ходить"
+    },
+    {
+      "en": "stop",
+      "uz": "to'xtamoq",
+      "ru": "останавливаться"
+    },
+    {
+      "en": "arrive",
+      "uz": "yetib kelmoq",
+      "ru": "прибывать"
+    },
+    {
+      "en": "office",
+      "uz": "ofis",
+      "ru": "офис"
+    }
+  ],
+  "text_en": "I go to the office by bus every day. I walk fast because I am late.",
+  "text_uz": "Men har kuni ofisga avtobus bilan boraman. Kech qolganimda tez yuraman.",
+  "text_ru": "Я езжу в офис на автобусе каждый день. Я иду быстро, потому что опаздываю.",
+  "audio": "lesson_005.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I ____ to the office by bus.",
+      "answer": "go"
+    }
+  ]
+}

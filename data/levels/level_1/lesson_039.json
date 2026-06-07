@@ -1,0 +1,218 @@
+{
+  "id": 39,
+  "level": 1,
+  "title": "Environmental Problems",
+  "words": [
+    {
+      "en": "environment",
+      "uz": "atrof-muhit",
+      "ru": "окружающая среда"
+    },
+    {
+      "en": "pollution",
+      "uz": "ifloslanish",
+      "ru": "загрязнение"
+    },
+    {
+      "en": "climate",
+      "uz": "iqlim",
+      "ru": "климат"
+    },
+    {
+      "en": "global warming",
+      "uz": "global isish",
+      "ru": "глобальное потепление"
+    },
+    {
+      "en": "greenhouse",
+      "uz": "issiqxona",
+      "ru": "парниковый"
+    },
+    {
+      "en": "emission",
+      "uz": "chiqindi",
+      "ru": "выброс"
+    },
+    {
+      "en": "carbon",
+      "uz": "uglerod",
+      "ru": "углерод"
+    },
+    {
+      "en": "fossil fuel",
+      "uz": "qazilma yoqilg'i",
+      "ru": "ископаемое топливо"
+    },
+    {
+      "en": "renewable",
+      "uz": "qayta tiklanadigan",
+      "ru": "возобновляемый"
+    },
+    {
+      "en": "solar",
+      "uz": "quyosh",
+      "ru": "солнечный"
+    },
+    {
+      "en": "wind",
+      "uz": "shamol",
+      "ru": "ветер"
+    },
+    {
+      "en": "energy",
+      "uz": "energiya",
+      "ru": "энергия"
+    },
+    {
+      "en": "recycle",
+      "uz": "qayta ishlash",
+      "ru": "переработка"
+    },
+    {
+      "en": "waste",
+      "uz": "chiqindi",
+      "ru": "отходы"
+    },
+    {
+      "en": "plastic",
+      "uz": "plastik",
+      "ru": "пластик"
+    },
+    {
+      "en": "ocean",
+      "uz": "okean",
+      "ru": "океан"
+    },
+    {
+      "en": "forest",
+      "uz": "o'rmon",
+      "ru": "лес"
+    },
+    {
+      "en": "deforestation",
+      "uz": "o'rmonlarni yo'q qilish",
+      "ru": "вырубка лесов"
+    },
+    {
+      "en": "species",
+      "uz": "tur",
+      "ru": "вид"
+    },
+    {
+      "en": "extinct",
+      "uz": "yo'q bo'lib ketgan",
+      "ru": "вымерший"
+    },
+    {
+      "en": "protect",
+      "uz": "himoya qilmoq",
+      "ru": "защищать"
+    },
+    {
+      "en": "wildlife",
+      "uz": "yovvoyi tabiat",
+      "ru": "дикая природа"
+    },
+    {
+      "en": "habitat",
+      "uz": "yashash joyi",
+      "ru": "среда обитания"
+    },
+    {
+      "en": "flood",
+      "uz": "suv toshqini",
+      "ru": "наводнение"
+    },
+    {
+      "en": "drought",
+      "uz": "qurg'oqchilik",
+      "ru": "засуха"
+    },
+    {
+      "en": "temperature",
+      "uz": "harorat",
+      "ru": "температура"
+    },
+    {
+      "en": "melt",
+      "uz": "ermoq",
+      "ru": "таять"
+    },
+    {
+      "en": "glacier",
+      "uz": "muzlik",
+      "ru": "ледник"
+    },
+    {
+      "en": "sea level",
+      "uz": "dengiz sathi",
+      "ru": "уровень моря"
+    },
+    {
+      "en": "toxic",
+      "uz": "zaharli",
+      "ru": "токсичный"
+    },
+    {
+      "en": "chemical",
+      "uz": "kimyoviy",
+      "ru": "химический"
+    },
+    {
+      "en": "factory",
+      "uz": "zavod",
+      "ru": "завод"
+    },
+    {
+      "en": "smoke",
+      "uz": "tutun",
+      "ru": "дым"
+    },
+    {
+      "en": "awareness",
+      "uz": "xabardorlik",
+      "ru": "осознание"
+    },
+    {
+      "en": "campaign",
+      "uz": "kampaniya",
+      "ru": "кампания"
+    },
+    {
+      "en": "solution",
+      "uz": "yechim",
+      "ru": "решение"
+    },
+    {
+      "en": "sustainable",
+      "uz": "barqaror",
+      "ru": "устойчивый"
+    },
+    {
+      "en": "nature",
+      "uz": "tabiat",
+      "ru": "природа"
+    },
+    {
+      "en": "disaster",
+      "uz": "ofat",
+      "ru": "катастрофа"
+    },
+    {
+      "en": "earthquake",
+      "uz": "zilzila",
+      "ru": "землетрясение"
+    }
+  ],
+  "text_en": "Our planet faces many serious environmental problems today. Climate change and global warming are caused by burning fossil fuels which release carbon emissions. Temperatures rise and glaciers melt causing sea levels to rise. Forests are cut down destroying wildlife habitats. Plastic pollution fills our oceans. However we can switch to renewable solar and wind energy, recycle waste, and raise awareness through campaigns.",
+  "text_uz": "Bugun sayyoramiz ko'plab jiddiy atrof-muhit muammolariga duch kelmoqda. Iqlim o'zgarishi va global isish qazilma yoqilg'ini yoqish natijasida yuzaga kelmoqda. Harorat ko'tarilmoqda va muzliklar erib, dengiz sathi ko'tarilmoqda. O'rmonlar kesilmoqda va yovvoyi tabiat yashash joylarini yo'q qilmoqda. Plastik ifloslanish okeanlarimizni to'ldirmoqda. Biroq biz qayta tiklanadigan energiyaga o'tishimiz mumkin.",
+  "text_ru": "Сегодня наша планета сталкивается со многими экологическими проблемами. Изменение климата вызвано сжиганием ископаемого топлива. Температуры растут ледники тают уровень моря поднимается. Леса вырубаются. Пластиковое загрязнение заполняет океаны. Однако мы можем перейти на возобновляемые источники энергии и перерабатывать отходы.",
+  "audio": "lesson_039.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Our planet faces many serious environmental problems today.",
+      "answer": "environment"
+    }
+  ]
+}

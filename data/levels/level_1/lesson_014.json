@@ -1,0 +1,68 @@
+{
+  "id": 14,
+  "level": 1,
+  "title": "Nature",
+  "words": [
+    {
+      "en": "nature",
+      "uz": "tabiat",
+      "ru": "природа"
+    },
+    {
+      "en": "tree",
+      "uz": "daraxt",
+      "ru": "дерево"
+    },
+    {
+      "en": "flower",
+      "uz": "gul",
+      "ru": "цветок"
+    },
+    {
+      "en": "river",
+      "uz": "daryo",
+      "ru": "река"
+    },
+    {
+      "en": "mountain",
+      "uz": "tog'",
+      "ru": "гора"
+    },
+    {
+      "en": "sea",
+      "uz": "dengiz",
+      "ru": "море"
+    },
+    {
+      "en": "sky",
+      "uz": "osmon",
+      "ru": "небо"
+    },
+    {
+      "en": "grass",
+      "uz": "o't",
+      "ru": "трава"
+    },
+    {
+      "en": "stone",
+      "uz": "tosh",
+      "ru": "камень"
+    },
+    {
+      "en": "air",
+      "uz": "havo",
+      "ru": "воздух"
+    }
+  ],
+  "text_en": "I love nature. The sky is blue, the grass is green, and flowers are beautiful.",
+  "text_uz": "Men tabiatni sevaman. Osmon ko'k, o't yashil va gullar chiroyli.",
+  "text_ru": "Я люблю природу. Небо синее, трава зелёная, и цветы красивые.",
+  "audio": "lesson_014.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "The ____ is blue.",
+      "answer": "sky"
+    }
+  ]
+}

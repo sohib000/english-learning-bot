@@ -1,0 +1,68 @@
+{
+  "id": 3,
+  "level": 1,
+  "title": "Food and Eating",
+  "words": [
+    {
+      "en": "eat",
+      "uz": "yemoq",
+      "ru": "есть"
+    },
+    {
+      "en": "food",
+      "uz": "ovqat",
+      "ru": "еда"
+    },
+    {
+      "en": "bread",
+      "uz": "non",
+      "ru": "хлеб"
+    },
+    {
+      "en": "water",
+      "uz": "suv",
+      "ru": "вода"
+    },
+    {
+      "en": "lunch",
+      "uz": "tushlik",
+      "ru": "обед"
+    },
+    {
+      "en": "dinner",
+      "uz": "kechki ovqat",
+      "ru": "ужин"
+    },
+    {
+      "en": "hungry",
+      "uz": "och",
+      "ru": "голодный"
+    },
+    {
+      "en": "cook",
+      "uz": "pishirmoq",
+      "ru": "готовить"
+    },
+    {
+      "en": "apple",
+      "uz": "olma",
+      "ru": "яблоко"
+    },
+    {
+      "en": "milk",
+      "uz": "sut",
+      "ru": "молоко"
+    }
+  ],
+  "text_en": "I eat lunch at one o'clock. My mother cooks dinner every evening.",
+  "text_uz": "Men soat birda tushlik qilaman. Onam har kechqurun kechki ovqat pishiradi.",
+  "text_ru": "Я обедаю в час дня. Моя мама готовит ужин каждый вечер.",
+  "audio": "lesson_003.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I ____ lunch at one o'clock.",
+      "answer": "eat"
+    }
+  ]
+}

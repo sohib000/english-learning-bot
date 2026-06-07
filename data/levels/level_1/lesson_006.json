@@ -1,0 +1,68 @@
+{
+  "id": 6,
+  "level": 1,
+  "title": "Weather",
+  "words": [
+    {
+      "en": "weather",
+      "uz": "ob-havo",
+      "ru": "погода"
+    },
+    {
+      "en": "sun",
+      "uz": "quyosh",
+      "ru": "солнце"
+    },
+    {
+      "en": "rain",
+      "uz": "yomg'ir",
+      "ru": "дождь"
+    },
+    {
+      "en": "wind",
+      "uz": "shamol",
+      "ru": "ветер"
+    },
+    {
+      "en": "cold",
+      "uz": "sovuq",
+      "ru": "холодный"
+    },
+    {
+      "en": "hot",
+      "uz": "issiq",
+      "ru": "жаркий"
+    },
+    {
+      "en": "today",
+      "uz": "bugun",
+      "ru": "сегодня"
+    },
+    {
+      "en": "outside",
+      "uz": "tashqarida",
+      "ru": "на улице"
+    },
+    {
+      "en": "wear",
+      "uz": "kiymoq",
+      "ru": "одевать"
+    },
+    {
+      "en": "umbrella",
+      "uz": "soyabon",
+      "ru": "зонт"
+    }
+  ],
+  "text_en": "Today the weather is cold and there is rain outside. I wear a coat and take my umbrella.",
+  "text_uz": "Bugun ob-havo sovuq va tashqarida yomg'ir yog'yapti. Palto kiyaman va soyabonimni olaman.",
+  "text_ru": "Сегодня погода холодная и на улице дождь. Я одеваю пальто и беру зонт.",
+  "audio": "lesson_006.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Today the weather is ____.",
+      "answer": "cold"
+    }
+  ]
+}

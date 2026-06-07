@@ -1,0 +1,68 @@
+{
+  "id": 22,
+  "level": 1,
+  "title": "Education",
+  "words": [
+    {
+      "en": "university",
+      "uz": "universitet",
+      "ru": "университет"
+    },
+    {
+      "en": "subject",
+      "uz": "fan",
+      "ru": "предмет"
+    },
+    {
+      "en": "exam",
+      "uz": "imtihon",
+      "ru": "экзамен"
+    },
+    {
+      "en": "pass",
+      "uz": "o'tmoq",
+      "ru": "сдать"
+    },
+    {
+      "en": "fail",
+      "uz": "yiqilmoq",
+      "ru": "провалить"
+    },
+    {
+      "en": "grade",
+      "uz": "baho",
+      "ru": "оценка"
+    },
+    {
+      "en": "library",
+      "uz": "kutubxona",
+      "ru": "библиотека"
+    },
+    {
+      "en": "notebook",
+      "uz": "daftar",
+      "ru": "тетрадь"
+    },
+    {
+      "en": "pen",
+      "uz": "ruchka",
+      "ru": "ручка"
+    },
+    {
+      "en": "lesson",
+      "uz": "dars",
+      "ru": "урок"
+    }
+  ],
+  "text_en": "I study at university. Tomorrow I have an exam and I want to pass with a good grade.",
+  "text_uz": "Men universitetda o'qiyman. Ertaga imtihon bor va yaxshi baho bilan o'tmoqchiman.",
+  "text_ru": "Я учусь в университете. Завтра у меня экзамен и я хочу сдать его с хорошей оценкой.",
+  "audio": "lesson_022.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Tomorrow I have an ____.",
+      "answer": "exam"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "id": 35,
+  "level": 1,
+  "title": "Learning a New Language",
+  "words": [
+    {
+      "en": "language",
+      "uz": "til",
+      "ru": "язык"
+    },
+    {
+      "en": "grammar",
+      "uz": "grammatika",
+      "ru": "грамматика"
+    },
+    {
+      "en": "vocabulary",
+      "uz": "lug'at",
+      "ru": "словарный запас"
+    },
+    {
+      "en": "pronunciation",
+      "uz": "talaffuz",
+      "ru": "произношение"
+    },
+    {
+      "en": "fluent",
+      "uz": "ravon",
+      "ru": "свободно"
+    },
+    {
+      "en": "accent",
+      "uz": "aksent",
+      "ru": "акцент"
+    },
+    {
+      "en": "native",
+      "uz": "ona tili",
+      "ru": "родной"
+    },
+    {
+      "en": "speaker",
+      "uz": "so'zlovchi",
+      "ru": "говорящий"
+    },
+    {
+      "en": "listen",
+      "uz": "tinglash",
+      "ru": "слушать"
+    },
+    {
+      "en": "repeat",
+      "uz": "takrorlash",
+      "ru": "повторять"
+    },
+    {
+      "en": "practice",
+      "uz": "mashq qilish",
+      "ru": "практиковаться"
+    },
+    {
+      "en": "mistake",
+      "uz": "xato",
+      "ru": "ошибка"
+    },
+    {
+      "en": "correct",
+      "uz": "to'g'ri",
+      "ru": "правильный"
+    },
+    {
+      "en": "improve",
+      "uz": "yaxshilamoq",
+      "ru": "улучшать"
+    },
+    {
+      "en": "progress",
+      "uz": "rivojlanish",
+      "ru": "прогресс"
+    },
+    {
+      "en": "level",
+      "uz": "daraja",
+      "ru": "уровень"
+    },
+    {
+      "en": "beginner",
+      "uz": "boshlang'ich",
+      "ru": "начинающий"
+    },
+    {
+      "en": "advanced",
+      "uz": "ilg'or",
+      "ru": "продвинутый"
+    },
+    {
+      "en": "course",
+      "uz": "kurs",
+      "ru": "курс"
+    },
+    {
+      "en": "textbook",
+      "uz": "darslik",
+      "ru": "учебник"
+    },
+    {
+      "en": "dictionary",
+      "uz": "lug'at",
+      "ru": "словарь"
+    },
+    {
+      "en": "translate",
+      "uz": "tarjima qilmoq",
+      "ru": "переводить"
+    },
+    {
+      "en": "understand",
+      "uz": "tushunmoq",
+      "ru": "понимать"
+    },
+    {
+      "en": "speak",
+      "uz": "gaplashmoq",
+      "ru": "говорить"
+    },
+    {
+      "en": "write",
+      "uz": "yozmoq",
+      "ru": "писать"
+    },
+    {
+      "en": "read",
+      "uz": "o'qimoq",
+      "ru": "читать"
+    },
+    {
+      "en": "skill",
+      "uz": "ko'nikma",
+      "ru": "навык"
+    },
+    {
+      "en": "confidence",
+      "uz": "ishonch",
+      "ru": "уверенность"
+    },
+    {
+      "en": "afraid",
+      "uz": "qo'rqmoq",
+      "ru": "бояться"
+    },
+    {
+      "en": "try",
+      "uz": "harakat qilmoq",
+      "ru": "стараться"
+    },
+    {
+      "en": "class",
+      "uz": "sinf",
+      "ru": "класс"
+    },
+    {
+      "en": "teacher",
+      "uz": "o'qituvchi",
+      "ru": "учитель"
+    },
+    {
+      "en": "student",
+      "uz": "o'quvchi",
+      "ru": "студент"
+    },
+    {
+      "en": "method",
+      "uz": "usul",
+      "ru": "метод"
+    },
+    {
+      "en": "memory",
+      "uz": "xotira",
+      "ru": "память"
+    },
+    {
+      "en": "forget",
+      "uz": "unutmoq",
+      "ru": "забывать"
+    },
+    {
+      "en": "remember",
+      "uz": "eslamoq",
+      "ru": "помнить"
+    },
+    {
+      "en": "daily",
+      "uz": "kunlik",
+      "ru": "ежедневный"
+    },
+    {
+      "en": "consistent",
+      "uz": "izchil",
+      "ru": "последовательный"
+    },
+    {
+      "en": "goal",
+      "uz": "maqsad",
+      "ru": "цель"
+    }
+  ],
+  "text_en": "Learning a new language is one of the best things you can do for your brain and your future. When I started learning English I was a complete beginner and I was afraid to make mistakes. But my teacher told me that mistakes are part of the learning process. Every day I study new vocabulary and grammar rules. I use a dictionary and a textbook. I listen to native speakers to improve my pronunciation and understand different accents. I try to speak in English even when I make errors because practice builds confidence. I watch films and read books in English to increase my vocabulary. After many months of consistent daily study I can see real progress in my level.",
+  "text_uz": "Yangi til o'rganish miyangiz va kelajagingiz uchun qilishingiz mumkin bo'lgan eng yaxshi narsalardan biridir. Men ingliz tilini o'rganishni boshlaganimda to'liq boshlang'ich edim va xato qilishdan qo'rqardim. Lekin o'qituvchim xatolar o'rganish jarayonining bir qismi ekanini aytdi. Har kuni yangi lug'at va grammatika qoidalarini o'rganaman. Lug'at va darslikdan foydalanaman. Talaffuzimni yaxshilash uchun ona tili so'zlovchilarini tinglayaman. Ishonch orttirish uchun xato qilsam ham ingliz tilida gaplashishga harakat qilaman.",
+  "text_ru": "Изучение нового языка — одно из лучших дел для мозга и будущего. Когда я начал учить английский я был полным новичком и боялся ошибаться. Но учитель сказал что ошибки — часть процесса обучения. Каждый день изучаю новые слова и правила грамматики. Использую словарь и учебник. Слушаю носителей языка чтобы улучшить произношение. Стараюсь говорить по-английски даже когда делаю ошибки потому что практика строит уверенность. Смотрю фильмы и читаю книги на английском чтобы пополнять словарный запас.",
+  "audio": "lesson_035.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Fill in the blank.",
+      "answer": "language"
+    }
+  ]
+}

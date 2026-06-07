@@ -1,0 +1,218 @@
+{
+  "id": 36,
+  "level": 1,
+  "title": "My Neighbourhood",
+  "words": [
+    {
+      "en": "neighbourhood",
+      "uz": "mahalla",
+      "ru": "район"
+    },
+    {
+      "en": "neighbour",
+      "uz": "qo'shni",
+      "ru": "сосед"
+    },
+    {
+      "en": "friendly",
+      "uz": "do'stona",
+      "ru": "дружелюбный"
+    },
+    {
+      "en": "quiet",
+      "uz": "tinch",
+      "ru": "тихий"
+    },
+    {
+      "en": "noisy",
+      "uz": "shovqinli",
+      "ru": "шумный"
+    },
+    {
+      "en": "safe",
+      "uz": "xavfsiz",
+      "ru": "безопасный"
+    },
+    {
+      "en": "dangerous",
+      "uz": "xavfli",
+      "ru": "опасный"
+    },
+    {
+      "en": "park",
+      "uz": "bog'",
+      "ru": "парк"
+    },
+    {
+      "en": "playground",
+      "uz": "o'yin maydoni",
+      "ru": "площадка"
+    },
+    {
+      "en": "library",
+      "uz": "kutubxona",
+      "ru": "библиотека"
+    },
+    {
+      "en": "pharmacy",
+      "uz": "dorixona",
+      "ru": "аптека"
+    },
+    {
+      "en": "bakery",
+      "uz": "nonvoyxona",
+      "ru": "пекарня"
+    },
+    {
+      "en": "rent",
+      "uz": "ijara",
+      "ru": "аренда"
+    },
+    {
+      "en": "apartment",
+      "uz": "kvartira",
+      "ru": "квартира"
+    },
+    {
+      "en": "building",
+      "uz": "bino",
+      "ru": "здание"
+    },
+    {
+      "en": "floor",
+      "uz": "qavat",
+      "ru": "этаж"
+    },
+    {
+      "en": "elevator",
+      "uz": "lift",
+      "ru": "лифт"
+    },
+    {
+      "en": "stairs",
+      "uz": "zinapoya",
+      "ru": "лестница"
+    },
+    {
+      "en": "entrance",
+      "uz": "kirish",
+      "ru": "вход"
+    },
+    {
+      "en": "parking",
+      "uz": "avtoturargoh",
+      "ru": "парковка"
+    },
+    {
+      "en": "garbage",
+      "uz": "axlat",
+      "ru": "мусор"
+    },
+    {
+      "en": "recycle",
+      "uz": "qayta ishlash",
+      "ru": "переработка"
+    },
+    {
+      "en": "community",
+      "uz": "jamiyat",
+      "ru": "сообщество"
+    },
+    {
+      "en": "volunteer",
+      "uz": "ko'ngilli",
+      "ru": "волонтёр"
+    },
+    {
+      "en": "meeting",
+      "uz": "yig'ilish",
+      "ru": "собрание"
+    },
+    {
+      "en": "local",
+      "uz": "mahalliy",
+      "ru": "местный"
+    },
+    {
+      "en": "council",
+      "uz": "kengash",
+      "ru": "совет"
+    },
+    {
+      "en": "rule",
+      "uz": "qoida",
+      "ru": "правило"
+    },
+    {
+      "en": "respect",
+      "uz": "hurmat",
+      "ru": "уважение"
+    },
+    {
+      "en": "clean",
+      "uz": "toza",
+      "ru": "чистый"
+    },
+    {
+      "en": "garden",
+      "uz": "bog'",
+      "ru": "сад"
+    },
+    {
+      "en": "tree",
+      "uz": "daraxt",
+      "ru": "дерево"
+    },
+    {
+      "en": "flower",
+      "uz": "gul",
+      "ru": "цветок"
+    },
+    {
+      "en": "street",
+      "uz": "ko'cha",
+      "ru": "улица"
+    },
+    {
+      "en": "road",
+      "uz": "yo'l",
+      "ru": "дорога"
+    },
+    {
+      "en": "traffic",
+      "uz": "transport",
+      "ru": "движение"
+    },
+    {
+      "en": "bus stop",
+      "uz": "avtobus bekati",
+      "ru": "остановка"
+    },
+    {
+      "en": "school",
+      "uz": "maktab",
+      "ru": "школа"
+    },
+    {
+      "en": "market",
+      "uz": "bozor",
+      "ru": "рынок"
+    },
+    {
+      "en": "church",
+      "uz": "cherkov",
+      "ru": "церковь"
+    }
+  ],
+  "text_en": "My neighbourhood is quiet and safe. I know most of my neighbours and we are friendly to each other. There is a small park with a playground near my apartment building. My building has six floors and an elevator. On my street there is a bakery, a pharmacy, and a small library. Every Saturday our local community holds a meeting in the park. We discuss problems and find solutions together. Last month we started a volunteer group to keep the neighbourhood clean. We collect garbage and put it in the right recycling bins. Children play in the park every evening and their laughter makes the neighbourhood feel alive. The local council makes rules that everyone must respect. I am proud to live in such a friendly and clean community.",
+  "text_uz": "Mening mahallam tinch va xavfsiz. Men qo'shnilarimning ko'pini bilaman va bir-birimizga do'stonamiz. Kvartira binam yaqinida o'yin maydoni bo'lgan kichik bog' bor. Binamda olti qavat va lift mavjud. Ko'chamda nonvoyxona, dorixona va kichik kutubxona bor. Har shanba mahalliy jamoamiz bog'da yig'ilish o'tkazadi. Muammolarni muhokama qilib yechim topamiz. O'tgan oy mahallamizni toza saqlash uchun ko'ngillilar guruhini tuzik. Axlatni yig'ib, to'g'ri qayta ishlash idishlariga solamiz. Bolalar har kechqurun bog'da o'ynaydi. Mahalliy kengash hamma hurmat qilishi kerak bo'lgan qoidalar belgilaydi.",
+  "text_ru": "Мой район тихий и безопасный. Я знаю большинство соседей и мы дружелюбны. Рядом с домом небольшой парк с площадкой. В доме шесть этажей и лифт. На улице есть пекарня аптека и библиотека. Каждую субботу местное сообщество проводит встречу в парке. Обсуждаем проблемы и находим решения. В прошлом месяце создали группу волонтёров. Собираем мусор и сортируем его. Дети каждый вечер играют в парке. Местный совет устанавливает правила которые все должны уважать.",
+  "audio": "lesson_036.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "My neighbourhood is quiet and safe.",
+      "answer": "neighbourhood"
+    }
+  ]
+}

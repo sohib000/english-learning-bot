@@ -1,0 +1,68 @@
+{
+  "id": 18,
+  "level": 1,
+  "title": "Feelings and Emotions",
+  "words": [
+    {
+      "en": "feel",
+      "uz": "his qilmoq",
+      "ru": "чувствовать"
+    },
+    {
+      "en": "sad",
+      "uz": "xafa",
+      "ru": "грустный"
+    },
+    {
+      "en": "angry",
+      "uz": "g'azablangan",
+      "ru": "злой"
+    },
+    {
+      "en": "scared",
+      "uz": "qo'rqqan",
+      "ru": "напуганный"
+    },
+    {
+      "en": "excited",
+      "uz": "hayajonlangan",
+      "ru": "взволнованный"
+    },
+    {
+      "en": "tired",
+      "uz": "charchagan",
+      "ru": "усталый"
+    },
+    {
+      "en": "proud",
+      "uz": "g'ururli",
+      "ru": "гордый"
+    },
+    {
+      "en": "calm",
+      "uz": "xotirjam",
+      "ru": "спокойный"
+    },
+    {
+      "en": "worry",
+      "uz": "tashvishlanmoq",
+      "ru": "беспокоиться"
+    },
+    {
+      "en": "smile",
+      "uz": "jilmaymoq",
+      "ru": "улыбаться"
+    }
+  ],
+  "text_en": "I feel tired after work but I am calm. I smile and stop worrying.",
+  "text_uz": "Ishdan keyin charchaganman lekin xotirjamman. Jilmayaman va tashvishlanishni to'xtataman.",
+  "text_ru": "После работы я чувствую усталость, но я спокоен. Я улыбаюсь и перестаю беспокоиться.",
+  "audio": "lesson_018.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I feel ____ after work.",
+      "answer": "tired"
+    }
+  ]
+}

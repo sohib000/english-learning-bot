@@ -1,0 +1,68 @@
+{
+  "id": 17,
+  "level": 1,
+  "title": "Body Parts",
+  "words": [
+    {
+      "en": "head",
+      "uz": "bosh",
+      "ru": "голова"
+    },
+    {
+      "en": "eye",
+      "uz": "ko'z",
+      "ru": "глаз"
+    },
+    {
+      "en": "nose",
+      "uz": "burun",
+      "ru": "нос"
+    },
+    {
+      "en": "mouth",
+      "uz": "og'iz",
+      "ru": "рот"
+    },
+    {
+      "en": "hand",
+      "uz": "qo'l",
+      "ru": "рука"
+    },
+    {
+      "en": "leg",
+      "uz": "oyoq",
+      "ru": "нога"
+    },
+    {
+      "en": "back",
+      "uz": "orqa",
+      "ru": "спина"
+    },
+    {
+      "en": "heart",
+      "uz": "yurak",
+      "ru": "сердце"
+    },
+    {
+      "en": "face",
+      "uz": "yuz",
+      "ru": "лицо"
+    },
+    {
+      "en": "finger",
+      "uz": "barmoq",
+      "ru": "палец"
+    }
+  ],
+  "text_en": "My head hurts today. I wash my face and hands every morning.",
+  "text_uz": "Bugun boshim og'riydi. Men har kuni ertalab yuzim va qo'llarimni yuvaman.",
+  "text_ru": "Сегодня у меня болит голова. Я мою лицо и руки каждое утро.",
+  "audio": "lesson_017.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "My ____ hurts today.",
+      "answer": "head"
+    }
+  ]
+}

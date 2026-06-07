@@ -1,0 +1,68 @@
+{
+  "id": 26,
+  "level": 1,
+  "title": "Travel and Holidays",
+  "words": [
+    {
+      "en": "holiday",
+      "uz": "bayram",
+      "ru": "праздник"
+    },
+    {
+      "en": "vacation",
+      "uz": "ta'til",
+      "ru": "отпуск"
+    },
+    {
+      "en": "passport",
+      "uz": "pasport",
+      "ru": "паспорт"
+    },
+    {
+      "en": "luggage",
+      "uz": "bagaj",
+      "ru": "багаж"
+    },
+    {
+      "en": "hotel",
+      "uz": "mehmonxona",
+      "ru": "отель"
+    },
+    {
+      "en": "visit",
+      "uz": "tashrif buyurmoq",
+      "ru": "посещать"
+    },
+    {
+      "en": "guide",
+      "uz": "gid",
+      "ru": "гид"
+    },
+    {
+      "en": "map",
+      "uz": "xarita",
+      "ru": "карта"
+    },
+    {
+      "en": "photo",
+      "uz": "surat",
+      "ru": "фото"
+    },
+    {
+      "en": "memory",
+      "uz": "xotira",
+      "ru": "воспоминание"
+    }
+  ],
+  "text_en": "On my vacation I visit new cities. I take photos and keep good memories.",
+  "text_uz": "Ta'tilimda yangi shaharlarni ziyorat qilaman. Suratga olaman va yaxshi xotiralar saqlayman.",
+  "text_ru": "В отпуске я посещаю новые города. Я делаю фото и храню хорошие воспоминания.",
+  "audio": "lesson_026.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "On my vacation I visit new ____.",
+      "answer": "cities"
+    }
+  ]
+}

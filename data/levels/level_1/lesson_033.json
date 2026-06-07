@@ -1,0 +1,218 @@
+{
+  "id": 33,
+  "level": 1,
+  "title": "At the Airport",
+  "words": [
+    {
+      "en": "airport",
+      "uz": "aeroport",
+      "ru": "аэропорт"
+    },
+    {
+      "en": "flight",
+      "uz": "parvoz",
+      "ru": "рейс"
+    },
+    {
+      "en": "passport",
+      "uz": "pasport",
+      "ru": "паспорт"
+    },
+    {
+      "en": "ticket",
+      "uz": "chipta",
+      "ru": "билет"
+    },
+    {
+      "en": "boarding",
+      "uz": "samolyotga o'tirish",
+      "ru": "посадка"
+    },
+    {
+      "en": "gate",
+      "uz": "darvoza",
+      "ru": "выход"
+    },
+    {
+      "en": "luggage",
+      "uz": "bagaj",
+      "ru": "багаж"
+    },
+    {
+      "en": "check-in",
+      "uz": "ro'yxatdan o'tish",
+      "ru": "регистрация"
+    },
+    {
+      "en": "customs",
+      "uz": "bojxona",
+      "ru": "таможня"
+    },
+    {
+      "en": "declare",
+      "uz": "e'lon qilmoq",
+      "ru": "декларировать"
+    },
+    {
+      "en": "security",
+      "uz": "xavfsizlik",
+      "ru": "безопасность"
+    },
+    {
+      "en": "scan",
+      "uz": "skanerlash",
+      "ru": "сканировать"
+    },
+    {
+      "en": "delayed",
+      "uz": "kechiktirilgan",
+      "ru": "задержан"
+    },
+    {
+      "en": "cancel",
+      "uz": "bekor qilmoq",
+      "ru": "отменять"
+    },
+    {
+      "en": "departure",
+      "uz": "jo'nash",
+      "ru": "отправление"
+    },
+    {
+      "en": "arrival",
+      "uz": "kelish",
+      "ru": "прибытие"
+    },
+    {
+      "en": "terminal",
+      "uz": "terminal",
+      "ru": "терминал"
+    },
+    {
+      "en": "international",
+      "uz": "xalqaro",
+      "ru": "международный"
+    },
+    {
+      "en": "domestic",
+      "uz": "ichki",
+      "ru": "внутренний"
+    },
+    {
+      "en": "seat",
+      "uz": "o'rindiq",
+      "ru": "место"
+    },
+    {
+      "en": "window",
+      "uz": "deraza",
+      "ru": "окно"
+    },
+    {
+      "en": "aisle",
+      "uz": "yo'lak",
+      "ru": "проход"
+    },
+    {
+      "en": "pilot",
+      "uz": "pilot",
+      "ru": "пилот"
+    },
+    {
+      "en": "crew",
+      "uz": "ekipaj",
+      "ru": "экипаж"
+    },
+    {
+      "en": "announcement",
+      "uz": "e'lon",
+      "ru": "объявление"
+    },
+    {
+      "en": "land",
+      "uz": "qo'nmoq",
+      "ru": "приземляться"
+    },
+    {
+      "en": "take off",
+      "uz": "ko'tarilmoq",
+      "ru": "взлетать"
+    },
+    {
+      "en": "altitude",
+      "uz": "balandlik",
+      "ru": "высота"
+    },
+    {
+      "en": "turbulence",
+      "uz": "turbulentlik",
+      "ru": "турбулентность"
+    },
+    {
+      "en": "belt",
+      "uz": "kamar",
+      "ru": "ремень"
+    },
+    {
+      "en": "overhead",
+      "uz": "tepada",
+      "ru": "над головой"
+    },
+    {
+      "en": "storage",
+      "uz": "saqlash joyi",
+      "ru": "место хранения"
+    },
+    {
+      "en": "carry",
+      "uz": "ko'tarmoq",
+      "ru": "нести"
+    },
+    {
+      "en": "weight",
+      "uz": "vazn",
+      "ru": "вес"
+    },
+    {
+      "en": "limit",
+      "uz": "chegara",
+      "ru": "лимит"
+    },
+    {
+      "en": "charge",
+      "uz": "to'lov",
+      "ru": "плата"
+    },
+    {
+      "en": "refund",
+      "uz": "qaytarish",
+      "ru": "возврат"
+    },
+    {
+      "en": "connection",
+      "uz": "ulanish",
+      "ru": "пересадка"
+    },
+    {
+      "en": "transfer",
+      "uz": "o'tish",
+      "ru": "трансфер"
+    },
+    {
+      "en": "visa",
+      "uz": "viza",
+      "ru": "виза"
+    }
+  ],
+  "text_en": "I arrive at the international airport three hours before my flight. First I go to check-in and show my passport and ticket. Then I put my luggage on the scale. The weight is under the limit so there is no extra charge. After check-in I go through security where they scan my bag and belt. I walk to the departure terminal and find my gate. The screen shows that my flight is on time. I hear an announcement from the crew and start boarding. I find my window seat and put my bag in the overhead storage. The pilot says we will take off in ten minutes. During the flight there is a little turbulence but I stay calm and fasten my belt. After three hours we land safely at our destination.",
+  "text_uz": "Reysimdan uch soat oldin xalqaro aeroportga yetib kelaman. Avval ro'yxatdan o'tish joyiga borib pasport va chiptamni ko'rsataman. Keyin bagajimni taroziga qo'yaman. Vazn chegaradan past, shuning uchun qo'shimcha to'lov yo'q. Ro'yxatdan o'tgandan keyin xavfsizlik nazoratidan o'taman. Jo'nash terminaliga borib darvozamni topaman. Ekranda reysim o'z vaqtida ekanligini ko'raman. Ekipaj e'lonini eshitib, samolyotga o'tirishni boshlayman. Deraza yonidagi o'rnimni topib, sumkamni tepagi javonga qo'yaman. Pilot o'n daqiqadan keyin ko'tarilishimizni aytadi. Parvoz paytida ozgina turbulentlik bo'ladi, lekin men xotirjam turib kamarimni bog'layman.",
+  "text_ru": "Я прибываю в международный аэропорт за три часа до рейса. Сначала иду на регистрацию и показываю паспорт и билет. Затем кладу багаж на весы. Вес в пределах лимита, поэтому нет доплаты. После регистрации прохожу через службу безопасности. Иду к терминалу вылета и нахожу выход. На экране вижу что рейс вовремя. Слышу объявление экипажа и начинаю посадку. Нахожу место у окна и кладу сумку в верхнее отделение. Пилот говорит что взлетим через десять минут. Во время полёта небольшая турбулентность но я спокоен и пристёгиваю ремень.",
+  "audio": "lesson_033.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I arrive at the airport three hours before my ____.",
+      "answer": "flight"
+    }
+  ]
+}

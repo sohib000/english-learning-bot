@@ -1,0 +1,68 @@
+{
+  "id": 23,
+  "level": 1,
+  "title": "Work and Jobs",
+  "words": [
+    {
+      "en": "job",
+      "uz": "ish",
+      "ru": "работа"
+    },
+    {
+      "en": "boss",
+      "uz": "xo'jayin",
+      "ru": "начальник"
+    },
+    {
+      "en": "salary",
+      "uz": "maosh",
+      "ru": "зарплата"
+    },
+    {
+      "en": "meeting",
+      "uz": "uchrashuv",
+      "ru": "встреча"
+    },
+    {
+      "en": "project",
+      "uz": "loyiha",
+      "ru": "проект"
+    },
+    {
+      "en": "deadline",
+      "uz": "muddat",
+      "ru": "срок"
+    },
+    {
+      "en": "colleague",
+      "uz": "hamkasb",
+      "ru": "коллега"
+    },
+    {
+      "en": "report",
+      "uz": "hisobot",
+      "ru": "отчёт"
+    },
+    {
+      "en": "busy",
+      "uz": "band",
+      "ru": "занятый"
+    },
+    {
+      "en": "tired",
+      "uz": "charchagan",
+      "ru": "усталый"
+    }
+  ],
+  "text_en": "I have a meeting with my boss today. The project deadline is tomorrow and I am very busy.",
+  "text_uz": "Bugun xo'jayinim bilan uchrashuv bor. Loyihaning muddati ertaga va men juda bandman.",
+  "text_ru": "Сегодня у меня встреча с начальником. Срок проекта завтра и я очень занят.",
+  "audio": "lesson_023.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I have a ____ with my boss.",
+      "answer": "meeting"
+    }
+  ]
+}

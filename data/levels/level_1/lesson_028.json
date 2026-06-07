@@ -1,0 +1,68 @@
+{
+  "id": 28,
+  "level": 1,
+  "title": "Weather and Seasons",
+  "words": [
+    {
+      "en": "season",
+      "uz": "fasl",
+      "ru": "сезон"
+    },
+    {
+      "en": "spring",
+      "uz": "bahor",
+      "ru": "весна"
+    },
+    {
+      "en": "summer",
+      "uz": "yoz",
+      "ru": "лето"
+    },
+    {
+      "en": "autumn",
+      "uz": "kuz",
+      "ru": "осень"
+    },
+    {
+      "en": "winter",
+      "uz": "qish",
+      "ru": "зима"
+    },
+    {
+      "en": "snow",
+      "uz": "qor",
+      "ru": "снег"
+    },
+    {
+      "en": "storm",
+      "uz": "bo'ron",
+      "ru": "буря"
+    },
+    {
+      "en": "warm",
+      "uz": "iliq",
+      "ru": "тёплый"
+    },
+    {
+      "en": "freeze",
+      "uz": "muzlamoq",
+      "ru": "замерзать"
+    },
+    {
+      "en": "cloud",
+      "uz": "bulut",
+      "ru": "облако"
+    }
+  ],
+  "text_en": "Winter is cold and there is a lot of snow. Summer is warm and I love this season.",
+  "text_uz": "Qish sovuq va ko'p qor yog'adi. Yoz iliq va men bu faslni sevaman.",
+  "text_ru": "Зима холодная и много снега. Лето тёплое и я люблю это время года.",
+  "audio": "lesson_028.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Winter is cold and there is a lot of ____.",
+      "answer": "snow"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+venv/
+__pycache__/
+*.pyc
+.env
+data/bot.db
+data/audio/generated/*.mp3
+*.zip

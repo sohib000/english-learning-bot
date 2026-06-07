@@ -1,0 +1,68 @@
+{
+  "id": 13,
+  "level": 1,
+  "title": "Animals",
+  "words": [
+    {
+      "en": "animal",
+      "uz": "hayvon",
+      "ru": "животное"
+    },
+    {
+      "en": "dog",
+      "uz": "it",
+      "ru": "собака"
+    },
+    {
+      "en": "cat",
+      "uz": "mushuk",
+      "ru": "кошка"
+    },
+    {
+      "en": "bird",
+      "uz": "qush",
+      "ru": "птица"
+    },
+    {
+      "en": "fish",
+      "uz": "baliq",
+      "ru": "рыба"
+    },
+    {
+      "en": "horse",
+      "uz": "ot",
+      "ru": "лошадь"
+    },
+    {
+      "en": "cow",
+      "uz": "sigir",
+      "ru": "корова"
+    },
+    {
+      "en": "big",
+      "uz": "katta",
+      "ru": "большой"
+    },
+    {
+      "en": "small",
+      "uz": "kichik",
+      "ru": "маленький"
+    },
+    {
+      "en": "wild",
+      "uz": "yovvoyi",
+      "ru": "дикий"
+    }
+  ],
+  "text_en": "I have a small dog and a big cat at home. They are good friends.",
+  "text_uz": "Uyimda kichik it va katta mushuk bor. Ular yaxshi do'stlar.",
+  "text_ru": "Дома у меня маленькая собака и большая кошка. Они хорошие друзья.",
+  "audio": "lesson_013.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I have a small ____ at home.",
+      "answer": "dog"
+    }
+  ]
+}

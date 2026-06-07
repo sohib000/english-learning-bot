@@ -1,0 +1,68 @@
+{
+  "id": 25,
+  "level": 1,
+  "title": "Food at Restaurant",
+  "words": [
+    {
+      "en": "restaurant",
+      "uz": "restoran",
+      "ru": "ресторан"
+    },
+    {
+      "en": "menu",
+      "uz": "menyu",
+      "ru": "меню"
+    },
+    {
+      "en": "order",
+      "uz": "buyurtma bermoq",
+      "ru": "заказывать"
+    },
+    {
+      "en": "waiter",
+      "uz": "ofitsiant",
+      "ru": "официант"
+    },
+    {
+      "en": "soup",
+      "uz": "sho'rva",
+      "ru": "суп"
+    },
+    {
+      "en": "meat",
+      "uz": "go'sht",
+      "ru": "мясо"
+    },
+    {
+      "en": "salad",
+      "uz": "salat",
+      "ru": "салат"
+    },
+    {
+      "en": "dessert",
+      "uz": "shirinlik",
+      "ru": "десерт"
+    },
+    {
+      "en": "bill",
+      "uz": "hisob",
+      "ru": "счёт"
+    },
+    {
+      "en": "tip",
+      "uz": "chodir",
+      "ru": "чаевые"
+    }
+  ],
+  "text_en": "We go to a restaurant and order soup and meat. The waiter brings the bill at the end.",
+  "text_uz": "Biz restoranga boramiz va sho'rva va go'sht buyurtma beramiz. Oxirida ofitsiant hisobni olib keladi.",
+  "text_ru": "Мы идём в ресторан и заказываем суп и мясо. В конце официант приносит счёт.",
+  "audio": "lesson_025.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "We order soup and ____.",
+      "answer": "meat"
+    }
+  ]
+}

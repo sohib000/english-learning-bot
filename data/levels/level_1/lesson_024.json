@@ -1,0 +1,68 @@
+{
+  "id": 24,
+  "level": 1,
+  "title": "Technology",
+  "words": [
+    {
+      "en": "phone",
+      "uz": "telefon",
+      "ru": "телефон"
+    },
+    {
+      "en": "computer",
+      "uz": "kompyuter",
+      "ru": "компьютер"
+    },
+    {
+      "en": "internet",
+      "uz": "internet",
+      "ru": "интернет"
+    },
+    {
+      "en": "message",
+      "uz": "xabar",
+      "ru": "сообщение"
+    },
+    {
+      "en": "call",
+      "uz": "qo'ng'iroq",
+      "ru": "звонок"
+    },
+    {
+      "en": "send",
+      "uz": "yubormoq",
+      "ru": "отправлять"
+    },
+    {
+      "en": "download",
+      "uz": "yuklab olmoq",
+      "ru": "скачивать"
+    },
+    {
+      "en": "password",
+      "uz": "parol",
+      "ru": "пароль"
+    },
+    {
+      "en": "screen",
+      "uz": "ekran",
+      "ru": "экран"
+    },
+    {
+      "en": "battery",
+      "uz": "batareya",
+      "ru": "батарея"
+    }
+  ],
+  "text_en": "I use my phone to send messages and call friends. The battery is low so I need to charge it.",
+  "text_uz": "Xabar yuborish va do'stlarga qo'ng'iroq qilish uchun telefonimdan foydalanaman. Batareya kam, shuning uchun zaryadlashim kerak.",
+  "text_ru": "Я использую телефон чтобы отправлять сообщения и звонить друзьям. Батарея разряжена, нужно зарядить.",
+  "audio": "lesson_024.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I use my ____ to send messages.",
+      "answer": "phone"
+    }
+  ]
+}

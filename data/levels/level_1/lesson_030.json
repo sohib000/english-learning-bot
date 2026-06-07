@@ -1,0 +1,68 @@
+{
+  "id": 30,
+  "level": 1,
+  "title": "Dreams and Goals",
+  "words": [
+    {
+      "en": "dream",
+      "uz": "orzu",
+      "ru": "мечта"
+    },
+    {
+      "en": "goal",
+      "uz": "maqsad",
+      "ru": "цель"
+    },
+    {
+      "en": "plan",
+      "uz": "reja",
+      "ru": "план"
+    },
+    {
+      "en": "future",
+      "uz": "kelajak",
+      "ru": "будущее"
+    },
+    {
+      "en": "success",
+      "uz": "muvaffaqiyat",
+      "ru": "успех"
+    },
+    {
+      "en": "believe",
+      "uz": "ishonmoq",
+      "ru": "верить"
+    },
+    {
+      "en": "try",
+      "uz": "harakat qilmoq",
+      "ru": "стараться"
+    },
+    {
+      "en": "achieve",
+      "uz": "erishmoq",
+      "ru": "достигать"
+    },
+    {
+      "en": "hard",
+      "uz": "qiyin",
+      "ru": "трудный"
+    },
+    {
+      "en": "possible",
+      "uz": "mumkin",
+      "ru": "возможный"
+    }
+  ],
+  "text_en": "My dream is to speak English well. I believe it is possible if I try hard every day.",
+  "text_uz": "Mening orzuim ingliz tilida yaxshi gaplashishdir. Har kuni qattiq harakat qilsam, bunga erishish mumkinligiga ishonaman.",
+  "text_ru": "Моя мечта — хорошо говорить по-английски. Я верю что это возможно если стараться каждый день.",
+  "audio": "lesson_030.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "My ____ is to speak English well.",
+      "answer": "dream"
+    }
+  ]
+}

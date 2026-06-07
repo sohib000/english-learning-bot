@@ -1,0 +1,68 @@
+{
+  "id": 21,
+  "level": 1,
+  "title": "Sports and Exercise",
+  "words": [
+    {
+      "en": "exercise",
+      "uz": "mashq qilmoq",
+      "ru": "заниматься"
+    },
+    {
+      "en": "gym",
+      "uz": "sport zali",
+      "ru": "спортзал"
+    },
+    {
+      "en": "swim",
+      "uz": "suzmoq",
+      "ru": "плавать"
+    },
+    {
+      "en": "kick",
+      "uz": "tepmoq",
+      "ru": "ударять"
+    },
+    {
+      "en": "ball",
+      "uz": "to'p",
+      "ru": "мяч"
+    },
+    {
+      "en": "team",
+      "uz": "jamoa",
+      "ru": "команда"
+    },
+    {
+      "en": "win",
+      "uz": "g'alaba qozonmoq",
+      "ru": "побеждать"
+    },
+    {
+      "en": "lose",
+      "uz": "yutqazmoq",
+      "ru": "проигрывать"
+    },
+    {
+      "en": "strong",
+      "uz": "kuchli",
+      "ru": "сильный"
+    },
+    {
+      "en": "jump",
+      "uz": "sakramoq",
+      "ru": "прыгать"
+    }
+  ],
+  "text_en": "I go to the gym three times a week. I swim and exercise to stay strong.",
+  "text_uz": "Men haftada uch marta sport zaliga boraman. Kuchli bo'lish uchun suzaman va mashq qilaman.",
+  "text_ru": "Я хожу в спортзал три раза в неделю. Я плаваю и занимаюсь чтобы оставаться сильным.",
+  "audio": "lesson_021.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I go to the ____ three times a week.",
+      "answer": "gym"
+    }
+  ]
+}

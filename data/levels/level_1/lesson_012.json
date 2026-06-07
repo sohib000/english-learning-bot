@@ -1,0 +1,68 @@
+{
+  "id": 12,
+  "level": 1,
+  "title": "Colors and Appearance",
+  "words": [
+    {
+      "en": "color",
+      "uz": "rang",
+      "ru": "цвет"
+    },
+    {
+      "en": "red",
+      "uz": "qizil",
+      "ru": "красный"
+    },
+    {
+      "en": "blue",
+      "uz": "ko'k",
+      "ru": "синий"
+    },
+    {
+      "en": "green",
+      "uz": "yashil",
+      "ru": "зелёный"
+    },
+    {
+      "en": "yellow",
+      "uz": "sariq",
+      "ru": "жёлтый"
+    },
+    {
+      "en": "black",
+      "uz": "qora",
+      "ru": "чёрный"
+    },
+    {
+      "en": "white",
+      "uz": "oq",
+      "ru": "белый"
+    },
+    {
+      "en": "tall",
+      "uz": "baland bo'yli",
+      "ru": "высокий"
+    },
+    {
+      "en": "short",
+      "uz": "past bo'yli",
+      "ru": "низкий"
+    },
+    {
+      "en": "beautiful",
+      "uz": "chiroyli",
+      "ru": "красивый"
+    }
+  ],
+  "text_en": "She has beautiful blue eyes and long black hair. She is tall and always wears red.",
+  "text_uz": "Uning chiroyli ko'k ko'zlari va uzun qora sochlari bor. U baland bo'yli va doim qizil kiyadi.",
+  "text_ru": "У неё красивые синие глаза и длинные чёрные волосы. Она высокая и всегда носит красное.",
+  "audio": "lesson_012.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "She has beautiful ____ eyes.",
+      "answer": "blue"
+    }
+  ]
+}

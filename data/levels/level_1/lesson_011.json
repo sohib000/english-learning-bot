@@ -1,0 +1,68 @@
+{
+  "id": 11,
+  "level": 1,
+  "title": "Numbers and Time",
+  "words": [
+    {
+      "en": "number",
+      "uz": "raqam",
+      "ru": "число"
+    },
+    {
+      "en": "hour",
+      "uz": "soat",
+      "ru": "час"
+    },
+    {
+      "en": "minute",
+      "uz": "daqiqa",
+      "ru": "минута"
+    },
+    {
+      "en": "second",
+      "uz": "soniya",
+      "ru": "секунда"
+    },
+    {
+      "en": "half",
+      "uz": "yarim",
+      "ru": "половина"
+    },
+    {
+      "en": "quarter",
+      "uz": "chorak",
+      "ru": "четверть"
+    },
+    {
+      "en": "midnight",
+      "uz": "yarim tun",
+      "ru": "полночь"
+    },
+    {
+      "en": "noon",
+      "uz": "tush",
+      "ru": "полдень"
+    },
+    {
+      "en": "count",
+      "uz": "sanash",
+      "ru": "считать"
+    },
+    {
+      "en": "late",
+      "uz": "kech",
+      "ru": "поздно"
+    }
+  ],
+  "text_en": "It is half past seven. I have one hour and a quarter before work.",
+  "text_uz": "Soat yetti yarim. Ishdan oldin bir soat va chorak vaqtim bor.",
+  "text_ru": "Сейчас половина восьмого. У меня есть час и четверть до работы.",
+  "audio": "lesson_011.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "It is half past ____.",
+      "answer": "seven"
+    }
+  ]
+}

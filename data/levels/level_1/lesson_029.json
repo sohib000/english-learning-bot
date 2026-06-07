@@ -1,0 +1,68 @@
+{
+  "id": 29,
+  "level": 1,
+  "title": "Cooking",
+  "words": [
+    {
+      "en": "recipe",
+      "uz": "retsept",
+      "ru": "рецепт"
+    },
+    {
+      "en": "ingredient",
+      "uz": "ingredient",
+      "ru": "ингредиент"
+    },
+    {
+      "en": "boil",
+      "uz": "qaynamoq",
+      "ru": "кипятить"
+    },
+    {
+      "en": "fry",
+      "uz": "qovurmoq",
+      "ru": "жарить"
+    },
+    {
+      "en": "bake",
+      "uz": "pishirmoq",
+      "ru": "печь"
+    },
+    {
+      "en": "mix",
+      "uz": "aralashtirmoq",
+      "ru": "смешивать"
+    },
+    {
+      "en": "cut",
+      "uz": "kesmoq",
+      "ru": "резать"
+    },
+    {
+      "en": "taste",
+      "uz": "ta'm ko'rmoq",
+      "ru": "пробовать"
+    },
+    {
+      "en": "spicy",
+      "uz": "achchiq",
+      "ru": "острый"
+    },
+    {
+      "en": "sweet",
+      "uz": "shirin",
+      "ru": "сладкий"
+    }
+  ],
+  "text_en": "I follow a recipe to cook dinner. I cut vegetables, boil water and mix all ingredients.",
+  "text_uz": "Kechki ovqat pishirish uchun retseptga amal qilaman. Sabzavotlarni kesaman, suv qaynatamanva barcha ingredientlarni aralashtiraman.",
+  "text_ru": "Я следую рецепту чтобы приготовить ужин. Я режу овощи, кипячу воду и смешиваю все ингредиенты.",
+  "audio": "lesson_029.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I follow a ____ to cook dinner.",
+      "answer": "recipe"
+    }
+  ]
+}

@@ -1,0 +1,218 @@
+{
+  "id": 34,
+  "level": 1,
+  "title": "In the Supermarket",
+  "words": [
+    {
+      "en": "supermarket",
+      "uz": "supermarket",
+      "ru": "супермаркет"
+    },
+    {
+      "en": "aisle",
+      "uz": "yo'lak",
+      "ru": "проход"
+    },
+    {
+      "en": "shelf",
+      "uz": "javon",
+      "ru": "полка"
+    },
+    {
+      "en": "cart",
+      "uz": "arava",
+      "ru": "тележка"
+    },
+    {
+      "en": "basket",
+      "uz": "savat",
+      "ru": "корзина"
+    },
+    {
+      "en": "cashier",
+      "uz": "kassir",
+      "ru": "кассир"
+    },
+    {
+      "en": "queue",
+      "uz": "navbat",
+      "ru": "очередь"
+    },
+    {
+      "en": "receipt",
+      "uz": "kvitansiya",
+      "ru": "чек"
+    },
+    {
+      "en": "discount",
+      "uz": "chegirma",
+      "ru": "скидка"
+    },
+    {
+      "en": "sale",
+      "uz": "sotuv",
+      "ru": "распродажа"
+    },
+    {
+      "en": "brand",
+      "uz": "brend",
+      "ru": "бренд"
+    },
+    {
+      "en": "organic",
+      "uz": "organik",
+      "ru": "органический"
+    },
+    {
+      "en": "frozen",
+      "uz": "muzlatilgan",
+      "ru": "замороженный"
+    },
+    {
+      "en": "fresh",
+      "uz": "yangi",
+      "ru": "свежий"
+    },
+    {
+      "en": "expiry",
+      "uz": "muddati",
+      "ru": "срок годности"
+    },
+    {
+      "en": "product",
+      "uz": "mahsulot",
+      "ru": "продукт"
+    },
+    {
+      "en": "package",
+      "uz": "qadoq",
+      "ru": "упаковка"
+    },
+    {
+      "en": "weigh",
+      "uz": "tortmoq",
+      "ru": "взвешивать"
+    },
+    {
+      "en": "choose",
+      "uz": "tanlash",
+      "ru": "выбирать"
+    },
+    {
+      "en": "compare",
+      "uz": "solishtirmoq",
+      "ru": "сравнивать"
+    },
+    {
+      "en": "cheap",
+      "uz": "arzon",
+      "ru": "дешёвый"
+    },
+    {
+      "en": "expensive",
+      "uz": "qimmat",
+      "ru": "дорогой"
+    },
+    {
+      "en": "total",
+      "uz": "jami",
+      "ru": "итого"
+    },
+    {
+      "en": "change",
+      "uz": "qaytim",
+      "ru": "сдача"
+    },
+    {
+      "en": "pay",
+      "uz": "to'lamoq",
+      "ru": "платить"
+    },
+    {
+      "en": "card",
+      "uz": "karta",
+      "ru": "карта"
+    },
+    {
+      "en": "cash",
+      "uz": "naqd",
+      "ru": "наличные"
+    },
+    {
+      "en": "member",
+      "uz": "a'zo",
+      "ru": "член"
+    },
+    {
+      "en": "loyalty",
+      "uz": "sadoqat",
+      "ru": "лояльность"
+    },
+    {
+      "en": "point",
+      "uz": "ball",
+      "ru": "балл"
+    },
+    {
+      "en": "delivery",
+      "uz": "yetkazib berish",
+      "ru": "доставка"
+    },
+    {
+      "en": "order",
+      "uz": "buyurtma",
+      "ru": "заказ"
+    },
+    {
+      "en": "online",
+      "uz": "onlayn",
+      "ru": "онлайн"
+    },
+    {
+      "en": "staff",
+      "uz": "xodim",
+      "ru": "персонал"
+    },
+    {
+      "en": "helpful",
+      "uz": "foydali",
+      "ru": "полезный"
+    },
+    {
+      "en": "section",
+      "uz": "bo'lim",
+      "ru": "секция"
+    },
+    {
+      "en": "dairy",
+      "uz": "sut mahsulotlari",
+      "ru": "молочный"
+    },
+    {
+      "en": "bakery",
+      "uz": "nonvoyxona",
+      "ru": "хлебобулочный"
+    },
+    {
+      "en": "meat",
+      "uz": "go'sht",
+      "ru": "мясо"
+    },
+    {
+      "en": "seafood",
+      "uz": "dengiz mahsulotlari",
+      "ru": "морепродукты"
+    }
+  ],
+  "text_en": "I go to the supermarket every week to buy food and other products. I take a cart and walk through different aisles. First I go to the fresh section and choose organic vegetables and fruit. I check the expiry date on every package carefully. Then I go to the dairy and bakery sections. I compare brands and choose the cheapest one. When my cart is full I join the queue at the cashier. I pay by card and get a receipt. The loyalty program gives me points that I can use for discounts on my next visit.",
+  "text_uz": "Men har hafta oziq-ovqat va boshqa mahsulotlar sotib olish uchun supermarketga boraman. Arava olib turli yo'laklar bo'ylab yuraman. Avval yangi bo'limga borib organik sabzavot va meva tanlayman. Har bir qadoqdagi muddat sanasini diqqat bilan tekshiraman. Keyin sut mahsulotlari va nonvoyxona bo'limiga o'taman. Brendlarni solishtirib arzonroq mahsulotni tanlayaman. Araavam to'lgach, kassir oldiga navbatga turaman.",
+  "text_ru": "Каждую неделю хожу в супермаркет за едой и другими продуктами. Беру тележку и прохожу по разным рядам. Сначала иду в свежий отдел и выбираю органические овощи и фрукты. Внимательно проверяю срок годности на каждой упаковке. Потом иду в молочный и хлебобулочный отделы. Сравниваю бренды и выбираю подешевле. Когда тележка полная встаю в очередь к кассиру. Плачу картой и получаю чек.",
+  "audio": "lesson_034.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Fill in the blank.",
+      "answer": "supermarket"
+    }
+  ]
+}

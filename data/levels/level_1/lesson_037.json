@@ -1,0 +1,218 @@
+{
+  "id": 37,
+  "level": 1,
+  "title": "A Visit to the Doctor",
+  "words": [
+    {
+      "en": "appointment",
+      "uz": "qabul",
+      "ru": "приём"
+    },
+    {
+      "en": "symptom",
+      "uz": "belgi",
+      "ru": "симптом"
+    },
+    {
+      "en": "fever",
+      "uz": "isitma",
+      "ru": "жар"
+    },
+    {
+      "en": "headache",
+      "uz": "bosh og'rig'i",
+      "ru": "головная боль"
+    },
+    {
+      "en": "cough",
+      "uz": "yo'tal",
+      "ru": "кашель"
+    },
+    {
+      "en": "cold",
+      "uz": "shamollash",
+      "ru": "простуда"
+    },
+    {
+      "en": "flu",
+      "uz": "gripp",
+      "ru": "грипп"
+    },
+    {
+      "en": "infection",
+      "uz": "infeksiya",
+      "ru": "инфекция"
+    },
+    {
+      "en": "allergy",
+      "uz": "allergiya",
+      "ru": "аллергия"
+    },
+    {
+      "en": "prescription",
+      "uz": "retsept",
+      "ru": "рецепт"
+    },
+    {
+      "en": "medicine",
+      "uz": "dori",
+      "ru": "лекарство"
+    },
+    {
+      "en": "tablet",
+      "uz": "tabletka",
+      "ru": "таблетка"
+    },
+    {
+      "en": "injection",
+      "uz": "ukol",
+      "ru": "укол"
+    },
+    {
+      "en": "nurse",
+      "uz": "hamshira",
+      "ru": "медсестра"
+    },
+    {
+      "en": "specialist",
+      "uz": "mutaxassis",
+      "ru": "специалист"
+    },
+    {
+      "en": "diagnosis",
+      "uz": "tashxis",
+      "ru": "диагноз"
+    },
+    {
+      "en": "treatment",
+      "uz": "davolash",
+      "ru": "лечение"
+    },
+    {
+      "en": "recovery",
+      "uz": "tuzalish",
+      "ru": "выздоровление"
+    },
+    {
+      "en": "patient",
+      "uz": "bemor",
+      "ru": "пациент"
+    },
+    {
+      "en": "blood",
+      "uz": "qon",
+      "ru": "кровь"
+    },
+    {
+      "en": "test",
+      "uz": "tahlil",
+      "ru": "анализ"
+    },
+    {
+      "en": "result",
+      "uz": "natija",
+      "ru": "результат"
+    },
+    {
+      "en": "healthy",
+      "uz": "sog'lom",
+      "ru": "здоровый"
+    },
+    {
+      "en": "weak",
+      "uz": "zaif",
+      "ru": "слабый"
+    },
+    {
+      "en": "pain",
+      "uz": "og'riq",
+      "ru": "боль"
+    },
+    {
+      "en": "severe",
+      "uz": "og'ir",
+      "ru": "тяжёлый"
+    },
+    {
+      "en": "mild",
+      "uz": "yengil",
+      "ru": "лёгкий"
+    },
+    {
+      "en": "chronic",
+      "uz": "surunkali",
+      "ru": "хронический"
+    },
+    {
+      "en": "prevent",
+      "uz": "oldini olmoq",
+      "ru": "предотвращать"
+    },
+    {
+      "en": "vaccine",
+      "uz": "vaksina",
+      "ru": "вакцина"
+    },
+    {
+      "en": "diet",
+      "uz": "parhez",
+      "ru": "диета"
+    },
+    {
+      "en": "rest",
+      "uz": "dam olish",
+      "ru": "отдых"
+    },
+    {
+      "en": "hospital",
+      "uz": "kasalxona",
+      "ru": "больница"
+    },
+    {
+      "en": "emergency",
+      "uz": "favqulodda",
+      "ru": "скорая помощь"
+    },
+    {
+      "en": "insurance",
+      "uz": "sug'urta",
+      "ru": "страховка"
+    },
+    {
+      "en": "bill",
+      "uz": "hisob",
+      "ru": "счёт"
+    },
+    {
+      "en": "pharmacy",
+      "uz": "dorixona",
+      "ru": "аптека"
+    },
+    {
+      "en": "advice",
+      "uz": "maslahat",
+      "ru": "совет"
+    },
+    {
+      "en": "check",
+      "uz": "tekshirmoq",
+      "ru": "проверять"
+    },
+    {
+      "en": "temperature",
+      "uz": "harorat",
+      "ru": "температура"
+    }
+  ],
+  "text_en": "Last week I had a fever, a headache, and a bad cough so I made an appointment with my doctor. When I arrived at the clinic a nurse checked my temperature and blood pressure. The doctor asked about my symptoms and how long I had been feeling weak. She asked if I had any allergies before writing the prescription. After the examination she said I had a mild flu infection. She wrote a prescription with tablets and gave me advice about rest and diet. She told me to avoid cold food and drink warm water with honey every morning. She also said that if my symptoms became severe I should go to the hospital immediately. I went to the pharmacy to buy the medicine. After five days of treatment and rest at home I made a full recovery and felt healthy and strong again.",
+  "text_uz": "O'tgan hafta isitmam, bosh og'rig'im va qattiq yo'talim bor edi, shuning uchun shifokorimga qabulga yozdirdim. Klinikaga kelganimda hamshira harorat va qon bosimimni o'lchadi. Shifokor belgilarim va qachondan beri zaif his qilayotganimni so'radi. Retsept yozishdan oldin allergiyam bormi deb so'radi. Ko'rikdan so'ng u yengil gripp infeksiyasi borligini aytdi. Tabletka bilan retsept yozib, dam olish va parhez bo'yicha maslahat berdi. Har kuni ertalab asal bilan iliq suv ichishni aytdi. Belgilar og'irlashsa kasalxonaga borishim kerakligini ham aytdi. Dorini sotib olish uchun dorixonaga bordim. Besh kunlik davolash va uyda dam olishdan keyin tuzaldim.",
+  "text_ru": "На прошлой неделе у меня был жар головная боль и сильный кашель поэтому я записался к врачу. Медсестра измерила температуру и давление. Врач спросила о симптомах и как давно я чувствую слабость. Перед рецептом спросила об аллергиях. После осмотра сказала что у меня лёгкий грипп. Написала рецепт с таблетками и дала советы по отдыху и диете. Велела пить тёплую воду с мёдом каждое утро. Если симптомы усилятся нужно ехать в больницу. Я купил лекарство в аптеке. После пяти дней лечения и отдыха полностью выздоровел.",
+  "audio": "lesson_037.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "Last week I had a fever, a headache, and a bad cough so I made an appointment with my doctor.",
+      "answer": "appointment"
+    }
+  ]
+}

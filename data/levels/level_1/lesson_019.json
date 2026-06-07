@@ -1,0 +1,68 @@
+{
+  "id": 19,
+  "level": 1,
+  "title": "Clothes",
+  "words": [
+    {
+      "en": "shirt",
+      "uz": "ko'ylak",
+      "ru": "рубашка"
+    },
+    {
+      "en": "dress",
+      "uz": "ko'ylak",
+      "ru": "платье"
+    },
+    {
+      "en": "jacket",
+      "uz": "kurtka",
+      "ru": "куртка"
+    },
+    {
+      "en": "shoes",
+      "uz": "poyabzal",
+      "ru": "обувь"
+    },
+    {
+      "en": "hat",
+      "uz": "shlyapa",
+      "ru": "шляпа"
+    },
+    {
+      "en": "coat",
+      "uz": "palto",
+      "ru": "пальто"
+    },
+    {
+      "en": "pocket",
+      "uz": "cho'ntak",
+      "ru": "карман"
+    },
+    {
+      "en": "size",
+      "uz": "o'lcham",
+      "ru": "размер"
+    },
+    {
+      "en": "wear",
+      "uz": "kiymoq",
+      "ru": "носить"
+    },
+    {
+      "en": "fashion",
+      "uz": "moda",
+      "ru": "мода"
+    }
+  ],
+  "text_en": "I wear a blue shirt and a jacket today. My shoes are new and comfortable.",
+  "text_uz": "Bugun ko'k ko'ylak va kurtka kiyaman. Mening poyabzalim yangi va qulay.",
+  "text_ru": "Сегодня я ношу синюю рубашку и куртку. Моя обувь новая и удобная.",
+  "audio": "lesson_019.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "I wear a blue ____.",
+      "answer": "shirt"
+    }
+  ]
+}

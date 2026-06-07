@@ -1,0 +1,68 @@
+{
+  "id": 9,
+  "level": 1,
+  "title": "Free Time",
+  "words": [
+    {
+      "en": "free",
+      "uz": "bo'sh",
+      "ru": "свободный"
+    },
+    {
+      "en": "time",
+      "uz": "vaqt",
+      "ru": "время"
+    },
+    {
+      "en": "read",
+      "uz": "o'qimoq",
+      "ru": "читать"
+    },
+    {
+      "en": "watch",
+      "uz": "tomosha qilmoq",
+      "ru": "смотреть"
+    },
+    {
+      "en": "music",
+      "uz": "musiqa",
+      "ru": "музыка"
+    },
+    {
+      "en": "sport",
+      "uz": "sport",
+      "ru": "спорт"
+    },
+    {
+      "en": "run",
+      "uz": "yugurmoq",
+      "ru": "бегать"
+    },
+    {
+      "en": "play",
+      "uz": "o'ynamoq",
+      "ru": "играть"
+    },
+    {
+      "en": "enjoy",
+      "uz": "zavqlanmoq",
+      "ru": "наслаждаться"
+    },
+    {
+      "en": "hobby",
+      "uz": "hobbi",
+      "ru": "хобби"
+    }
+  ],
+  "text_en": "In my free time I read books and play sport. I enjoy music and watch films.",
+  "text_uz": "Bo'sh vaqtimda kitob o'qiyman va sport bilan shug'ullanaman. Musiqa va filmlardan zavqlanaman.",
+  "text_ru": "В свободное время я читаю книги и занимаюсь спортом. Я наслаждаюсь музыкой и смотрю фильмы.",
+  "audio": "lesson_009.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "In my free ____ I read books.",
+      "answer": "time"
+    }
+  ]
+}

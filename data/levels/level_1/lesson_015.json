@@ -1,0 +1,68 @@
+{
+  "id": 15,
+  "level": 1,
+  "title": "City and Places",
+  "words": [
+    {
+      "en": "city",
+      "uz": "shahar",
+      "ru": "город"
+    },
+    {
+      "en": "street",
+      "uz": "ko'cha",
+      "ru": "улица"
+    },
+    {
+      "en": "park",
+      "uz": "bog'",
+      "ru": "парк"
+    },
+    {
+      "en": "bank",
+      "uz": "bank",
+      "ru": "банк"
+    },
+    {
+      "en": "hotel",
+      "uz": "mehmonxona",
+      "ru": "гостиница"
+    },
+    {
+      "en": "market",
+      "uz": "bozor",
+      "ru": "рынок"
+    },
+    {
+      "en": "church",
+      "uz": "cherkov",
+      "ru": "церковь"
+    },
+    {
+      "en": "bridge",
+      "uz": "ko'prik",
+      "ru": "мост"
+    },
+    {
+      "en": "near",
+      "uz": "yaqin",
+      "ru": "близко"
+    },
+    {
+      "en": "far",
+      "uz": "uzoq",
+      "ru": "далеко"
+    }
+  ],
+  "text_en": "The bank is near the park. The market is far from my street.",
+  "text_uz": "Bank bog'ning yaqinida. Bozor mening ko'chamdan uzoqda.",
+  "text_ru": "Банк находится рядом с парком. Рынок далеко от моей улицы.",
+  "audio": "lesson_015.mp3",
+  "tests": [
+    {
+      "type": "fill_blank",
+      "question": "The bank is near the ____.",
+      "answer": "park"
+    }
+  ]
+}
