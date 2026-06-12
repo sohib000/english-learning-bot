@@ -11,14 +11,17 @@ from database.repository.users import advance_lesson
 
 router = Router()
 
+
 def safe(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
 
 def result_emoji(score: int) -> str:
     if score >= 80: return "🏆"
     if score >= 60: return "👍"
     if score >= 40: return "😐"
     return "💪"
+
 
 async def send_question(message: Message, state: FSMContext):
     """Отправляет текущий вопрос."""
@@ -43,14 +46,11 @@ async def send_question(message: Message, state: FSMContext):
 
 
 # ══════════════════════════════════════════
-#  Начало теста
+#  Общий запуск теста (из урока и из вечернего напоминания)
 # ══════════════════════════════════════════
-@router.callback_query(F.data.startswith("test:"))
-async def start_test(call: CallbackQuery, state: FSMContext, db_user: dict):
-    lesson_id = int(call.data.split(":")[1])
+async def _begin_test(call: CallbackQuery, state: FSMContext, db_user: dict, lesson_id: int):
     lang = db_user["language"]
 
-    # Используем lesson_id из кнопки — не current_lesson из БД!
     tests = build_test_sequence(
         db_user["current_level"],
         lesson_id,
@@ -68,6 +68,9 @@ async def start_test(call: CallbackQuery, state: FSMContext, db_user: dict):
         lang=lang,
         user_id=db_user["id"],
         tg_id=call.from_user.id,
+        # ФИКС: запоминаем, тест ли это ТЕКУЩЕГО урока.
+        # Раньше пересдача старого урока из «Мои уроки» двигала current_lesson вперёд.
+        is_current_lesson=(lesson_id == db_user["current_lesson"]),
     )
 
     # Удаляем сообщение с уроком
@@ -76,7 +79,6 @@ async def start_test(call: CallbackQuery, state: FSMContext, db_user: dict):
     except Exception:
         pass
 
-    # Заголовок
     header = (
         "🧠 <b>Test boshlanmoqda!</b>\n\n"
         "5 ta savol. Har bir savolga diqqat bilan javob bering. 💪"
@@ -90,14 +92,44 @@ async def start_test(call: CallbackQuery, state: FSMContext, db_user: dict):
 
 
 # ══════════════════════════════════════════
+#  Начало теста — кнопка под уроком
+# ══════════════════════════════════════════
+@router.callback_query(F.data.startswith("test:"))
+async def start_test(call: CallbackQuery, state: FSMContext, db_user: dict):
+    lesson_id = int(call.data.split(":")[1])
+    await _begin_test(call, state, db_user, lesson_id)
+
+
+# ══════════════════════════════════════════
+#  Начало теста — кнопка из вечернего напоминания
+#  ФИКС: раньше callback "evening_test" вообще не обрабатывался —
+#  кнопка не делала ничего.
+# ══════════════════════════════════════════
+@router.callback_query(F.data == "evening_test")
+async def start_evening_test(call: CallbackQuery, state: FSMContext, db_user: dict):
+    if not db_user:
+        await call.answer("Сначала нажми /start", show_alert=True)
+        return
+    await _begin_test(call, state, db_user, db_user["current_lesson"])
+
+
+# ══════════════════════════════════════════
 #  Ответ кнопкой
 # ══════════════════════════════════════════
 @router.callback_query(TestSession.q1_multiple_choice, F.data.startswith("ans:"))
 async def handle_choice(call: CallbackQuery, state: FSMContext):
-    parts = call.data.split(":")
+    # ФИКС: maxsplit=2 — раньше ответ с ":" внутри обрезался
+    parts = call.data.split(":", 2)
+    btn_q_index = int(parts[1])
     answer = parts[2]
 
     data = await state.get_data()
+
+    # ФИКС: защита от нажатия на кнопку старого вопроса
+    if btn_q_index != data["q_index"]:
+        await call.answer()
+        return
+
     q = data["tests"][data["q_index"]]
     correct = q["correct"]
     lang = data.get("lang", "ru")
@@ -172,7 +204,12 @@ async def finish_test(target: Message, state: FSMContext):
 
     await save_progress(data["user_id"], data["lesson_id"], final_score)
     await update_after_test(data["user_id"], final_score)
-    await advance_lesson(data["tg_id"])
+
+    # ФИКС: переходим к следующему уроку ТОЛЬКО если сдан тест текущего урока.
+    # Пересдача старых уроков больше не сбивает прогресс.
+    if data.get("is_current_lesson"):
+        await advance_lesson(data["tg_id"])
+
     await state.clear()
 
     if lang == "uz":

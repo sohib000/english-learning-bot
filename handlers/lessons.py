@@ -1,10 +1,16 @@
+import os
+
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, FSInputFile
+
 from database.db import get_db
+from database.repository.lessons import load_lesson
 from services.lesson_service import get_lesson_message
+from services.audio_service import get_or_generate_audio
 from keyboards.lessons import lesson_keyboard
 
 router = Router()
+
 
 async def get_read_count(user_id: int, lesson_id: int) -> int:
     db = await get_db()
@@ -17,23 +23,25 @@ async def get_read_count(user_id: int, lesson_id: int) -> int:
         return rows[0]["read_count"] or 0
     return 0
 
+
 async def increment_read_count(user_id: int, lesson_id: int) -> int:
+    # После добавления UNIQUE(user_id, lesson_id) — честный upsert без дублей
     db = await get_db()
     await db.execute(
-        "INSERT OR IGNORE INTO progress (user_id, lesson_id, read_count) VALUES (?,?,0)",
-        (user_id, lesson_id)
-    )
-    await db.execute(
-        "UPDATE progress SET read_count = read_count + 1 WHERE user_id=? AND lesson_id=?",
+        """INSERT INTO progress (user_id, lesson_id, read_count)
+           VALUES (?, ?, 1)
+           ON CONFLICT(user_id, lesson_id)
+           DO UPDATE SET read_count = COALESCE(read_count, 0) + 1""",
         (user_id, lesson_id)
     )
     await db.commit()
     rows = await db.execute_fetchall(
-        "SELECT MAX(read_count) as rc FROM progress WHERE user_id=? AND lesson_id=?",
+        "SELECT read_count FROM progress WHERE user_id=? AND lesson_id=?",
         (user_id, lesson_id)
     )
     await db.close()
-    return rows[0]["rc"] or 1
+    return (rows[0]["read_count"] if rows else 1) or 1
+
 
 # ══════════════════════════════════════════
 #  Показать урок
@@ -59,13 +67,17 @@ async def show_lesson(message: Message, db_user: dict):
         reply_markup=lesson_keyboard(lesson_id, read_count=read_count),
     )
 
+
 # ══════════════════════════════════════════
 #  Кнопка "Я прочитал"
 # ══════════════════════════════════════════
 @router.callback_query(F.data.startswith("read:"))
 async def mark_read(call: CallbackQuery, db_user: dict):
+    if not db_user:
+        await call.answer("Сначала нажми /start", show_alert=True)
+        return
     lesson_id = int(call.data.split(":")[1])
-    lang = db_user["language"] if db_user else "ru"
+    lang = db_user["language"]
     new_count = await increment_read_count(db_user["id"], lesson_id)
 
     if lang == "uz":
@@ -89,30 +101,33 @@ async def mark_read(call: CallbackQuery, db_user: dict):
         pass
     await call.answer(toast, show_alert=False)
 
+
 # ══════════════════════════════════════════
 #  Кнопка "Слушать аудио"
+#  ФИКС: раньше всегда играл аудио ТЕКУЩЕГО урока,
+#  даже если кнопку нажали на старом уроке в «Мои уроки».
+#  Теперь грузим именно тот урок, чей lesson_id в кнопке.
 # ══════════════════════════════════════════
 @router.callback_query(F.data.startswith("audio:"))
 async def send_audio(call: CallbackQuery, db_user: dict):
-    import os
-    lang = db_user["language"]
-    result = await get_lesson_message(
-        level=db_user["current_level"],
-        lesson_number=db_user["current_lesson"],
-        language=lang,
-    )
+    if not db_user:
+        await call.answer("Сначала нажми /start", show_alert=True)
+        return
 
-    if not result:
+    lang = db_user["language"]
+    lesson_id = int(call.data.split(":")[1])
+    lesson = load_lesson(db_user["current_level"], lesson_id)
+
+    if not lesson:
         await call.answer()
         return
 
-    path = result.get("audio_path")
+    caption = "🔊 Diqqat bilan tinglang!" if lang == "uz" else "🔊 Слушай внимательно!"
 
     # Проверяем кэш
-    if path and os.path.exists(path) and os.path.getsize(path) > 0:
-        audio = FSInputFile(path)
-        caption = "🔊 Diqqat bilan tinglang!" if lang == "uz" else "🔊 Слушай внимательно!"
-        await call.message.answer_audio(audio, caption=caption)
+    cached = os.path.join("data/audio/generated", f"lesson_{lesson_id:03d}.mp3")
+    if os.path.exists(cached) and os.path.getsize(cached) > 0:
+        await call.message.answer_audio(FSInputFile(cached), caption=caption)
         await call.answer()
         return
 
@@ -120,15 +135,10 @@ async def send_audio(call: CallbackQuery, db_user: dict):
     msg_wait = "⏳ Audio tayyorlanmoqda..." if lang == "uz" else "⏳ Генерирую аудио..."
     await call.answer(msg_wait, show_alert=False)
 
-    from services.audio_service import get_or_generate_audio
     try:
-        new_path = await get_or_generate_audio(
-            result["lesson"]["text_en"], result["lesson"]["id"]
-        )
+        new_path = await get_or_generate_audio(lesson["text_en"], lesson["id"])
         if new_path and os.path.exists(new_path) and os.path.getsize(new_path) > 0:
-            audio = FSInputFile(new_path)
-            caption = "🔊 Diqqat bilan tinglang!" if lang == "uz" else "🔊 Слушай внимательно!"
-            await call.message.answer_audio(audio, caption=caption)
+            await call.message.answer_audio(FSInputFile(new_path), caption=caption)
         else:
             msg = "❌ Audio mavjud emas." if lang == "uz" else "❌ Аудио недоступно на сервере."
             await call.message.answer(msg)
@@ -136,7 +146,6 @@ async def send_audio(call: CallbackQuery, db_user: dict):
         msg = "❌ Audio xatosi." if lang == "uz" else "❌ Ошибка аудио."
         await call.message.answer(msg)
 
-    await call.answer()
 
 # ══════════════════════════════════════════
 #  Открыть урок из напоминания

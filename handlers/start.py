@@ -57,30 +57,21 @@ TIME_TEXT = {
     ),
 }
 
-def time_keyboard(lang: str) -> InlineKeyboardMarkup:
-    times = ["06:00", "07:00", "08:00", "09:00", "10:00"]
-    buttons = [InlineKeyboardButton(text=t, callback_data=f"time:{t}") for t in times]
-    custom_text = "✏️ Своё время" if lang == "ru" else "✏️ O'z vaqtim"
-    return InlineKeyboardMarkup(inline_keyboard=[
-        buttons[:3],
-        buttons[3:],
-        [InlineKeyboardButton(text=custom_text, callback_data="time:custom")],
-    ])
 
-def ready_text(lang: str, notify_time: str) -> str:
-    if lang == "ru":
-        return (
-            f"✅ <b>Всё готово!</b>\n\n"
-            f"🌅 Первый урок придёт в <b>{notify_time}</b>\n\n"
-            f"А пока — загляни в урок дня прямо сейчас!\n"
-            f"Нажми кнопку <b>📖 Урок дня</b> внизу 👇"
-        )
-    return (
-        f"✅ <b>Hammasi tayyor!</b>\n\n"
-        f"🌅 Birinchi dars <b>{notify_time}</b> da keladi\n\n"
-        f"Hoziroq bugungi darsga qarang!\n"
-        f"Pastdagi <b>📖 Bugungi dars</b> tugmasini bosing 👇"
-    )
+def normalize_time(time_str: str) -> str | None:
+    """Проверяет ЧЧ:ММ и нормализует к ближайшему часу (рассылка идёт раз в час).
+    Возвращает 'HH:00' или None, если формат/значения неверные.
+    ФИКС: раньше принималось даже 99:99."""
+    m = re.match(r"^(\d{1,2}):(\d{2})$", time_str.strip())
+    if not m:
+        return None
+    hh, mm = int(m.group(1)), int(m.group(2))
+    if not (0 <= hh <= 23 and 0 <= mm <= 59):
+        return None
+    # Рассылка срабатывает только в :00, поэтому округляем минуты
+    if mm >= 30:
+        hh = (hh + 1) % 24
+    return f"{hh:02d}:00"
 
 
 # ══════════════════════════════════════════
@@ -130,12 +121,41 @@ async def choose_language(call: CallbackQuery, state: FSMContext):
     await call.answer()
 
 
+def time_keyboard(lang: str) -> InlineKeyboardMarkup:
+    times = ["06:00", "07:00", "08:00", "09:00", "10:00"]
+    buttons = [InlineKeyboardButton(text=t, callback_data=f"time:{t}") for t in times]
+    custom_text = "✏️ Своё время" if lang == "ru" else "✏️ O'z vaqtim"
+    return InlineKeyboardMarkup(inline_keyboard=[
+        buttons[:3],
+        buttons[3:],
+        [InlineKeyboardButton(text=custom_text, callback_data="time:custom")],
+    ])
+
+
+def ready_text(lang: str, notify_time: str) -> str:
+    if lang == "ru":
+        return (
+            f"✅ <b>Всё готово!</b>\n\n"
+            f"🌅 Первый урок придёт в <b>{notify_time}</b>\n\n"
+            f"А пока — загляни в урок дня прямо сейчас!\n"
+            f"Нажми кнопку <b>📖 Урок дня</b> внизу 👇"
+        )
+    return (
+        f"✅ <b>Hammasi tayyor!</b>\n\n"
+        f"🌅 Birinchi dars <b>{notify_time}</b> da keladi\n\n"
+        f"Hoziroq bugungi darsga qarang!\n"
+        f"Pastdagi <b>📖 Bugungi dars</b> tugmasini bosing 👇"
+    )
+
+
 # ══════════════════════════════════════════
 #  Выбор времени — кнопка
 # ══════════════════════════════════════════
 @router.callback_query(Registration.choosing_time, F.data.startswith("time:"))
 async def choose_time_button(call: CallbackQuery, state: FSMContext):
-    value = call.data.split(":")[1]
+    # ФИКС: callback "time:07:00" резался обычным split(":")[1] до "07",
+    # и в базу сохранялось "07" вместо "07:00" — урок не отправлялся никогда.
+    value = call.data.split(":", 1)[1]
     data = await state.get_data()
     lang = data["language"]
 
@@ -157,9 +177,9 @@ async def choose_time_button(call: CallbackQuery, state: FSMContext):
 async def choose_time_manual(message: Message, state: FSMContext):
     data = await state.get_data()
     lang = data["language"]
-    time_str = message.text.strip()
+    time_str = normalize_time(message.text or "")
 
-    if not re.match(r"^\d{2}:\d{2}$", time_str):
+    if not time_str:
         err = "❌ Неверный формат. Напиши как <code>07:00</code>" if lang == "ru" \
               else "❌ Noto'g'ri format. <code>07:00</code> kabi yozing"
         await message.answer(err, parse_mode="HTML")
@@ -197,11 +217,15 @@ async def change_language_cmd(message: Message, state: FSMContext):
     )
     await state.set_state(Registration.choosing_language)
 
+
 @router.callback_query(F.data.startswith("lang:"))
 async def switch_language(call: CallbackQuery, state: FSMContext):
     lang = call.data.split(":")[1]
     await update_language(call.from_user.id, lang)
     await state.clear()
     msg = "✅ Язык изменён на Русский" if lang == "ru" else "✅ Til O'zbekchaga o'zgartirildi"
-    await call.message.edit_text(msg)
+    try:
+        await call.message.edit_text(msg)
+    except Exception:
+        await call.message.answer(msg)
     await call.answer()

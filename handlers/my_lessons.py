@@ -7,6 +7,7 @@ from keyboards.lessons import lesson_keyboard
 
 router = Router()
 
+
 async def get_user_progress(user_id: int) -> dict:
     """Возвращает словарь {lesson_id: данные} по всем записям пользователя."""
     db = await get_db()
@@ -23,6 +24,7 @@ async def get_user_progress(user_id: int) -> dict:
     await db.close()
     return {r["lesson_id"]: dict(r) for r in rows}
 
+
 def lesson_icon(p: dict) -> str:
     if not p or not p.get("completed"):
         return "📤"
@@ -30,6 +32,7 @@ def lesson_icon(p: dict) -> str:
     if score >= 80: return "🏆"
     if score >= 60: return "✅"
     return "😐"
+
 
 async def build_my_lessons_keyboard(user_id: int, current_lesson: int, level: int, lang: str) -> InlineKeyboardMarkup:
     progress = await get_user_progress(user_id)
@@ -67,6 +70,7 @@ async def build_my_lessons_keyboard(user_id: int, current_lesson: int, level: in
     )])
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
+
 def build_header(progress: dict, current_lesson: int, lang: str) -> str:
     done   = sum(1 for p in progress.values() if p.get("completed"))
     total  = current_lesson  # всего уроков включая текущий
@@ -89,6 +93,7 @@ def build_header(progress: dict, current_lesson: int, lang: str) -> str:
         f"Средний балл: <b>{avg:.0f}%</b>\n\n"
         f"{legend}"
     )
+
 
 # ══════════════════════════════════════════
 #  Показать список уроков
@@ -142,19 +147,18 @@ async def open_my_lesson(call: CallbackQuery, db_user: dict):
     await db.close()
 
     p = dict(p_rows[0]) if p_rows else {}
+
+    # ФИКС: rc объявлялся внутри try и при исключении падал NameError ниже.
+    rc = p.get("read_count") or 0
     info_lines = ""
-    try:
-        rc = p["read_count"] or 0
-        if rc > 0:
-            read_label = "Marta o'qilgan" if lang == "uz" else "Раз прочитано"
-            info_lines += f"\n👁 {read_label}: <b>{rc}</b>"
-        if p["completed"]:
-            score = p["score"] or 0
-            icon = "🏆" if score >= 80 else "✅" if score >= 60 else "😐"
-            result_label = "Oldingi natija" if lang == "uz" else "Лучший результат"
-            info_lines += f"\n{icon} {result_label}: <b>{score}%</b>"
-    except Exception:
-        pass
+    if rc > 0:
+        read_label = "Marta o'qilgan" if lang == "uz" else "Раз прочитано"
+        info_lines += f"\n👁 {read_label}: <b>{rc}</b>"
+    if p.get("completed"):
+        score = p.get("score") or 0
+        icon = "🏆" if score >= 80 else "✅" if score >= 60 else "😐"
+        result_label = "Oldingi natija" if lang == "uz" else "Лучший результат"
+        info_lines += f"\n{icon} {result_label}: <b>{score}%</b>"
 
     translate_label = "Tarjima" if lang == "uz" else "Перевод"
     words_label     = "So'zlar" if lang == "uz" else "Слова"
@@ -172,7 +176,7 @@ async def open_my_lesson(call: CallbackQuery, db_user: dict):
             callback_data=f"audio:{lesson_id}"
         )],
         [InlineKeyboardButton(
-            text=f"✅ O'qidim ({rc if p_rows else 0})" if lang == "uz" else f"✅ Прочитал ({rc if p_rows else 0})",
+            text=f"✅ O'qidim ({rc})" if lang == "uz" else f"✅ Прочитал ({rc})",
             callback_data=f"read:{lesson_id}"
         )],
         [InlineKeyboardButton(
@@ -202,6 +206,7 @@ async def back_to_my_lessons(call: CallbackQuery, db_user: dict):
     header  = build_header(progress, current, lang)
     await call.message.answer(header, parse_mode="HTML", reply_markup=kb)
     await call.answer()
+
 
 @router.callback_query(F.data == "mylessons:close")
 async def close_my_lessons(call: CallbackQuery):

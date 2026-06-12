@@ -6,13 +6,28 @@ from aiogram.fsm.state import State, StatesGroup
 import re
 
 from database.db import get_db
-from database.repository.users import update_language
 from keyboards.main_menu import main_menu
 
 router = Router()
 
+
 class SettingsState(StatesGroup):
     waiting_time = State()
+
+
+def normalize_time(time_str: str) -> str | None:
+    """Проверяет ЧЧ:ММ и нормализует к ближайшему часу (рассылка идёт раз в час).
+    ФИКС: раньше принималось даже 99:99."""
+    m = re.match(r"^(\d{1,2}):(\d{2})$", time_str.strip())
+    if not m:
+        return None
+    hh, mm = int(m.group(1)), int(m.group(2))
+    if not (0 <= hh <= 23 and 0 <= mm <= 59):
+        return None
+    if mm >= 30:
+        hh = (hh + 1) % 24
+    return f"{hh:02d}:00"
+
 
 def settings_keyboard(lang: str, hourly: bool) -> InlineKeyboardMarkup:
     if lang == "uz":
@@ -36,6 +51,7 @@ def settings_keyboard(lang: str, hourly: bool) -> InlineKeyboardMarkup:
         [InlineKeyboardButton(text=reset_text,   callback_data="set:reset_lesson")],
     ])
 
+
 async def get_hourly(user_id: int) -> bool:
     db = await get_db()
     rows = await db.execute_fetchall(
@@ -44,6 +60,7 @@ async def get_hourly(user_id: int) -> bool:
     await db.close()
     return bool(rows[0]["hourly_enabled"]) if rows else True
 
+
 async def get_morning_time(user: dict) -> str:
     db = await get_db()
     rows = await db.execute_fetchall(
@@ -51,6 +68,7 @@ async def get_morning_time(user: dict) -> str:
     )
     await db.close()
     return rows[0]["morning_time"] if rows else user["notify_time"]
+
 
 def build_settings_text(lang: str, morning: str, hourly: bool) -> str:
     if lang == "uz":
@@ -72,6 +90,7 @@ def build_settings_text(lang: str, morning: str, hourly: bool) -> str:
             "Выбери что хочешь изменить:"
         )
 
+
 @router.message(F.text.in_(["Настройки", "Sozlamalar", "⚙️ Настройки", "⚙️ Sozlamalar"]))
 async def show_settings(message: Message, db_user: dict):
     if not db_user:
@@ -82,6 +101,7 @@ async def show_settings(message: Message, db_user: dict):
     morning = await get_morning_time(db_user)
     text = build_settings_text(lang, morning, hourly)
     await message.answer(text, parse_mode="HTML", reply_markup=settings_keyboard(lang, hourly))
+
 
 @router.callback_query(F.data == "set:language")
 async def change_language(call: CallbackQuery, db_user: dict):
@@ -97,6 +117,7 @@ async def change_language(call: CallbackQuery, db_user: dict):
     await call.message.edit_text(text, reply_markup=kb)
     await call.answer()
 
+
 @router.callback_query(F.data.startswith("setlang:"))
 async def set_language(call: CallbackQuery, db_user: dict):
     new_lang = call.data.split(":")[1]
@@ -111,6 +132,7 @@ async def set_language(call: CallbackQuery, db_user: dict):
     await call.message.edit_text(msg)
     await call.message.answer("OK", reply_markup=main_menu(new_lang))
     await call.answer()
+
 
 @router.callback_query(F.data == "set:time")
 async def change_time(call: CallbackQuery, state: FSMContext, db_user: dict):
@@ -129,9 +151,12 @@ async def change_time(call: CallbackQuery, state: FSMContext, db_user: dict):
     await state.set_state(SettingsState.waiting_time)
     await call.answer()
 
+
 @router.callback_query(SettingsState.waiting_time, F.data.startswith("settime:"))
 async def set_time_button(call: CallbackQuery, state: FSMContext, db_user: dict):
-    value = call.data.split(":")[1]
+    # ФИКС: callback "settime:07:00" резался обычным split(":")[1] до "07",
+    # и в базу сохранялось "07" вместо "07:00" — урок не отправлялся никогда.
+    value = call.data.split(":", 1)[1]
     lang = db_user["language"]
     if value == "custom":
         prompt = "Vaqtni yozing (07:00):" if lang == "uz" else "Напиши время (07:00):"
@@ -141,15 +166,17 @@ async def set_time_button(call: CallbackQuery, state: FSMContext, db_user: dict)
     await _save_time(call.message, state, db_user, value, lang)
     await call.answer()
 
+
 @router.message(SettingsState.waiting_time)
 async def set_time_manual(message: Message, state: FSMContext, db_user: dict):
     lang = db_user["language"]
-    time_str = message.text.strip()
-    if not re.match(r"^\d{2}:\d{2}$", time_str):
+    time_str = normalize_time(message.text or "")
+    if not time_str:
         err = "Noto'g'ri format. 07:00 kabi yozing" if lang == "uz" else "Неверный формат. Напиши как 07:00"
         await message.answer(err)
         return
     await _save_time(message, state, db_user, time_str, lang)
+
 
 async def _save_time(target, state, db_user, time_str, lang):
     db = await get_db()
@@ -161,6 +188,7 @@ async def _save_time(target, state, db_user, time_str, lang):
     msg = "Vaqt o'zgartirildi! Endi dars " + time_str + " da keladi." if lang == "uz" \
           else "Время изменено! Теперь урок приходит в " + time_str + "."
     await target.answer(msg, reply_markup=main_menu(lang))
+
 
 @router.callback_query(F.data == "set:toggle_reminders")
 async def toggle_reminders(call: CallbackQuery, db_user: dict):
@@ -179,6 +207,7 @@ async def toggle_reminders(call: CallbackQuery, db_user: dict):
     await call.message.edit_text(text, parse_mode="HTML", reply_markup=settings_keyboard(lang, new_val))
     await call.answer(msg, show_alert=True)
 
+
 @router.callback_query(F.data == "set:reset_lesson")
 async def reset_lesson_confirm(call: CallbackQuery, db_user: dict):
     lang = db_user["language"]
@@ -189,6 +218,7 @@ async def reset_lesson_confirm(call: CallbackQuery, db_user: dict):
     text = "Darsni qayta boshlaysizmi?" if lang == "uz" else "Сбросить прогресс текущего урока?"
     await call.message.edit_text(text, reply_markup=kb)
     await call.answer()
+
 
 @router.callback_query(F.data == "set:reset_confirm")
 async def reset_lesson_do(call: CallbackQuery, db_user: dict):
@@ -204,6 +234,7 @@ async def reset_lesson_do(call: CallbackQuery, db_user: dict):
     await call.message.edit_text(msg)
     await call.answer()
 
+
 @router.callback_query(F.data == "set:stats")
 async def settings_stats(call: CallbackQuery, db_user: dict):
     from services.statistics_service import format_stats_message
@@ -214,6 +245,7 @@ async def settings_stats(call: CallbackQuery, db_user: dict):
     ]])
     await call.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
     await call.answer()
+
 
 @router.callback_query(F.data == "set:back")
 async def settings_back(call: CallbackQuery, db_user: dict):

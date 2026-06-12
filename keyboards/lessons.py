@@ -1,9 +1,9 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 def lesson_keyboard(lesson_id: int, read_count: int = 0) -> InlineKeyboardMarkup:
-    # Счётчик прочтений
+    # Счётчик прочтений (ФИКС: опечатка "Prочитал")
     if read_count == 0:
-        read_label = "✅ Prочитал / O'qidim (0)"
+        read_label = "✅ Прочитал / O'qidim (0)"
     elif read_count == 1:
         read_label = f"✅ Прочитал / O'qidim ({read_count} раз)"
     elif read_count < 5:
