@@ -236,15 +236,6 @@ async def adm_msg_user_start(call: CallbackQuery, state: FSMContext):
 # ══════════════════════════════════════════
 @router.callback_query(F.data == "adm:stats")
 async def adm_stats(call: CallbackQuery):
-    import logging
-    try:
-        await _adm_stats_inner(call)
-    except Exception as e:
-        logging.error(f"adm_stats CRASH: {e}", exc_info=True)
-        await call.message.answer(f"Ошибка статистики: {e}")
-        await call.answer()
-
-async def _adm_stats_inner(call: CallbackQuery):
     db = await get_db()
     lessons_done  = await db.execute_fetchall("SELECT COUNT(*) as c FROM progress WHERE completed=TRUE")
     avg           = await db.execute_fetchall("SELECT ROUND(AVG(score),1) as a FROM progress WHERE completed=TRUE")
@@ -294,10 +285,7 @@ async def _adm_stats_inner(call: CallbackQuery):
         [InlineKeyboardButton(text="🔄 Обновить", callback_data="adm:stats")],
         [InlineKeyboardButton(text="🔙 Назад",    callback_data="adm:menu")],
     ])
-    try:
-        await call.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
-    except Exception:
-        pass
+    await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
     await call.answer()
 
 # ══════════════════════════════════════════
