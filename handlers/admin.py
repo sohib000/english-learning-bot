@@ -84,7 +84,7 @@ async def adm_users(call: CallbackQuery):
         [InlineKeyboardButton(text="📋 Все пользователи",   callback_data="adm:users_list:0")],
         [InlineKeyboardButton(text="🔙 Назад",              callback_data="adm:menu")],
     ])
-    await call.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
+    await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
     await call.answer()
 
 @router.callback_query(F.data.startswith("adm:users_list:"))
