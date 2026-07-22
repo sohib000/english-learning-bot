@@ -1,97 +1,95 @@
 from database.db import get_db
-from database.models import (
-    CREATE_USERS, CREATE_PROGRESS,
-    CREATE_STATISTICS, CREATE_REMINDERS
-)
-
-CREATE_LESSONS_TABLE = """
-CREATE TABLE IF NOT EXISTS lessons (
-    id            INTEGER PRIMARY KEY AUTOINCREMENT,
-    lesson_number INTEGER UNIQUE NOT NULL,
-    text_en       TEXT,
-    audio_path    TEXT
-);"""
-
 
 async def run_migrations():
     db = await get_db()
-    for sql in [CREATE_USERS, CREATE_PROGRESS, CREATE_STATISTICS, CREATE_REMINDERS, CREATE_LESSONS_TABLE]:
-        await db.execute(sql)
 
-    # Добавляем read_count если его нет (для существующих БД)
+    # Основные таблицы
+    await db.execute("""
+        CREATE TABLE IF NOT EXISTS users (
+            id              INTEGER PRIMARY KEY AUTOINCREMENT,
+            telegram_id     INTEGER UNIQUE NOT NULL,
+            name            TEXT,
+            language        TEXT DEFAULT 'ru',
+            current_level   INTEGER DEFAULT 1,
+            current_lesson  INTEGER DEFAULT 1,
+            notify_time     TEXT DEFAULT '07:00',
+            created_at      DATETIME DEFAULT CURRENT_TIMESTAMP
+        )""")
+
+    await db.execute("""
+        CREATE TABLE IF NOT EXISTS progress (
+            id           INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id      INTEGER REFERENCES users(id),
+            lesson_id    INTEGER NOT NULL,
+            score        INTEGER DEFAULT 0,
+            completed    BOOLEAN DEFAULT FALSE,
+            completed_at DATETIME,
+            lesson_sent  BOOLEAN DEFAULT FALSE,
+            read_count   INTEGER DEFAULT 0
+        )""")
+
+    await db.execute("""
+        CREATE TABLE IF NOT EXISTS statistics (
+            id                INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id           INTEGER UNIQUE REFERENCES users(id),
+            words_learned     INTEGER DEFAULT 0,
+            lessons_completed INTEGER DEFAULT 0,
+            current_streak    INTEGER DEFAULT 0,
+            average_score     REAL DEFAULT 0.0,
+            last_activity     DATETIME
+        )""")
+
+    await db.execute("""
+        CREATE TABLE IF NOT EXISTS reminders (
+            id              INTEGER PRIMARY KEY AUTOINCREMENT,
+            user_id         INTEGER UNIQUE REFERENCES users(id),
+            hourly_enabled  BOOLEAN DEFAULT TRUE,
+            morning_time    TEXT DEFAULT '07:00',
+            evening_time    TEXT DEFAULT '20:00'
+        )""")
+
+    await db.execute("""
+        CREATE TABLE IF NOT EXISTS lessons (
+            id            INTEGER PRIMARY KEY AUTOINCREMENT,
+            lesson_number INTEGER UNIQUE NOT NULL,
+            text_en       TEXT,
+            audio_path    TEXT
+        )""")
+
+    # Таблица кэша аудио (file_id из Telegram)
+    await db.execute("""
+        CREATE TABLE IF NOT EXISTS audio_cache (
+            lesson_id    INTEGER PRIMARY KEY,
+            file_id      TEXT NOT NULL,
+            created_at   DATETIME DEFAULT CURRENT_TIMESTAMP
+        )""")
+
+    # Миграция 1: read_count
     try:
         await db.execute("ALTER TABLE progress ADD COLUMN read_count INTEGER DEFAULT 0")
-        await db.commit()
-        print("Added read_count column")
-    except Exception:
-        pass  # Колонка уже есть
-
-    # ФИКС: у progress не было UNIQUE(user_id, lesson_id),
-    # поэтому INSERT OR IGNORE / ON CONFLICT не срабатывали и копились дубли.
-    # 1) Схлопываем существующие дубли, сохраняя лучшие значения.
-    # 2) Создаём уникальный индекс — дальше работает честный upsert.
-    try:
-        await db.execute("""
-            DELETE FROM progress
-            WHERE id NOT IN (
-                SELECT MIN(id) FROM progress GROUP BY user_id, lesson_id
-            )
-        """)
-        # Перед удалением дублей переносим максимумы в оставшуюся строку
-        # (на случай, если лучшие значения были в удалённых строках,
-        #  сначала агрегируем во временную таблицу)
+        print("Migration: added read_count")
     except Exception:
         pass
 
-    # Надёжный вариант: пересобираем агрегаты заново
+    # Миграция 2: удаляем дубли в progress (оставляем лучший результат)
     try:
-        await db.execute("DROP TABLE IF EXISTS _progress_tmp")
         await db.execute("""
-            CREATE TABLE _progress_tmp AS
-            SELECT user_id,
-                   lesson_id,
-                   MAX(COALESCE(score, 0))            AS score,
-                   MAX(COALESCE(completed, 0))        AS completed,
-                   MAX(completed_at)                  AS completed_at,
-                   MAX(COALESCE(lesson_sent, 0))      AS lesson_sent,
-                   MAX(COALESCE(read_count, 0))       AS read_count
-            FROM progress
-            GROUP BY user_id, lesson_id
-        """)
-        await db.execute("DELETE FROM progress")
-        await db.execute("""
-            INSERT INTO progress (user_id, lesson_id, score, completed, completed_at, lesson_sent, read_count)
-            SELECT user_id, lesson_id, score, completed, completed_at, lesson_sent, read_count
-            FROM _progress_tmp
-        """)
-        await db.execute("DROP TABLE _progress_tmp")
-        await db.commit()
-    except Exception as e:
-        print(f"Progress dedup skipped: {e}")
-
-    # ФИКС: из-за старого бага в базе могло сохраниться время "07" вместо "07:00".
-    # Чиним автоматически.
-    try:
-        await db.execute(
-            "UPDATE users SET notify_time = notify_time || ':00' WHERE length(notify_time) <= 2"
-        )
-        await db.execute(
-            "UPDATE reminders SET morning_time = morning_time || ':00' WHERE length(morning_time) <= 2"
-        )
-        await db.commit()
+            DELETE FROM progress WHERE id NOT IN (
+                SELECT MAX(id) FROM progress GROUP BY user_id, lesson_id
+            )""")
+        print("Migration: removed duplicate progress rows")
     except Exception:
         pass
 
+    # Миграция 3: UNIQUE индекс на progress
     try:
-        await db.execute(
-            "CREATE UNIQUE INDEX IF NOT EXISTS idx_progress_user_lesson "
-            "ON progress(user_id, lesson_id)"
-        )
-        await db.commit()
-        print("Unique index on progress ready")
-    except Exception as e:
-        print(f"Index creation skipped: {e}")
+        await db.execute("""
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_progress_user_lesson
+            ON progress(user_id, lesson_id)""")
+        print("Migration: UNIQUE index created on progress(user_id, lesson_id)")
+    except Exception:
+        pass
 
     await db.commit()
     await db.close()
-    print("Migrations done")
+    print("✅ All migrations done")

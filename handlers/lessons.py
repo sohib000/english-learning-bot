@@ -1,16 +1,13 @@
 import os
-
 from aiogram import Router, F
 from aiogram.types import Message, CallbackQuery, FSInputFile
-
 from database.db import get_db
 from database.repository.lessons import load_lesson
 from services.lesson_service import get_lesson_message
-from services.audio_service import get_or_generate_audio
+from services.audio_service import get_or_generate_audio, get_cached_file_id, save_file_id
 from keyboards.lessons import lesson_keyboard
 
 router = Router()
-
 
 async def get_read_count(user_id: int, lesson_id: int) -> int:
     db = await get_db()
@@ -19,21 +16,16 @@ async def get_read_count(user_id: int, lesson_id: int) -> int:
         (user_id, lesson_id)
     )
     await db.close()
-    if rows:
-        return rows[0]["read_count"] or 0
-    return 0
-
+    return (rows[0]["read_count"] or 0) if rows else 0
 
 async def increment_read_count(user_id: int, lesson_id: int) -> int:
-    # После добавления UNIQUE(user_id, lesson_id) — честный upsert без дублей
     db = await get_db()
-    await db.execute(
-        """INSERT INTO progress (user_id, lesson_id, read_count)
-           VALUES (?, ?, 1)
-           ON CONFLICT(user_id, lesson_id)
-           DO UPDATE SET read_count = COALESCE(read_count, 0) + 1""",
-        (user_id, lesson_id)
-    )
+    await db.execute("""
+        INSERT INTO progress (user_id, lesson_id, read_count)
+        VALUES (?, ?, 1)
+        ON CONFLICT(user_id, lesson_id)
+        DO UPDATE SET read_count = COALESCE(read_count, 0) + 1
+    """, (user_id, lesson_id))
     await db.commit()
     rows = await db.execute_fetchall(
         "SELECT read_count FROM progress WHERE user_id=? AND lesson_id=?",
@@ -41,7 +33,6 @@ async def increment_read_count(user_id: int, lesson_id: int) -> int:
     )
     await db.close()
     return (rows[0]["read_count"] if rows else 1) or 1
-
 
 # ══════════════════════════════════════════
 #  Показать урок
@@ -66,7 +57,6 @@ async def show_lesson(message: Message, db_user: dict):
         result["text"], parse_mode="HTML",
         reply_markup=lesson_keyboard(lesson_id, read_count=read_count),
     )
-
 
 # ══════════════════════════════════════════
 #  Кнопка "Я прочитал"
@@ -101,12 +91,9 @@ async def mark_read(call: CallbackQuery, db_user: dict):
         pass
     await call.answer(toast, show_alert=False)
 
-
 # ══════════════════════════════════════════
 #  Кнопка "Слушать аудио"
-#  ФИКС: раньше всегда играл аудио ТЕКУЩЕГО урока,
-#  даже если кнопку нажали на старом уроке в «Мои уроки».
-#  Теперь грузим именно тот урок, чей lesson_id в кнопке.
+#  Теперь сохраняем file_id в БД — аудио не теряется при деплое
 # ══════════════════════════════════════════
 @router.callback_query(F.data.startswith("audio:"))
 async def send_audio(call: CallbackQuery, db_user: dict):
@@ -124,28 +111,38 @@ async def send_audio(call: CallbackQuery, db_user: dict):
 
     caption = "🔊 Diqqat bilan tinglang!" if lang == "uz" else "🔊 Слушай внимательно!"
 
-    # Проверяем кэш
-    cached = os.path.join("data/audio/generated", f"lesson_{lesson_id:03d}.mp3")
-    if os.path.exists(cached) and os.path.getsize(cached) > 0:
-        await call.message.answer_audio(FSInputFile(cached), caption=caption)
+    # 1. Проверяем file_id в БД (не теряется при деплое)
+    file_id = await get_cached_file_id(lesson_id)
+    if file_id:
+        await call.message.answer_audio(file_id, caption=caption)
         await call.answer()
         return
 
-    # Генерируем
-    msg_wait = "⏳ Audio tayyorlanmoqda..." if lang == "uz" else "⏳ Генерирую аудио..."
-    await call.answer(msg_wait, show_alert=False)
+    # 2. Проверяем локальный кэш
+    cached = os.path.join("data/audio/generated", f"lesson_{lesson_id:03d}.mp3")
+    if os.path.exists(cached) and os.path.getsize(cached) > 0:
+        msg = await call.message.answer_audio(FSInputFile(cached), caption=caption)
+        # Сохраняем file_id для будущих запросов
+        if msg.audio:
+            await save_file_id(lesson_id, msg.audio.file_id)
+        await call.answer()
+        return
 
+    # 3. Генерируем через gTTS
+    await call.answer("⏳ Генерирую аудио...", show_alert=False)
     try:
         new_path = await get_or_generate_audio(lesson["text_en"], lesson["id"])
         if new_path and os.path.exists(new_path) and os.path.getsize(new_path) > 0:
-            await call.message.answer_audio(FSInputFile(new_path), caption=caption)
+            msg = await call.message.answer_audio(FSInputFile(new_path), caption=caption)
+            # Сохраняем file_id
+            if msg.audio:
+                await save_file_id(lesson_id, msg.audio.file_id)
         else:
-            msg = "❌ Audio mavjud emas." if lang == "uz" else "❌ Аудио недоступно на сервере."
+            msg = "❌ Audio mavjud emas." if lang == "uz" else "❌ Аудио недоступно."
             await call.message.answer(msg)
     except Exception:
         msg = "❌ Audio xatosi." if lang == "uz" else "❌ Ошибка аудио."
         await call.message.answer(msg)
-
 
 # ══════════════════════════════════════════
 #  Открыть урок из напоминания
