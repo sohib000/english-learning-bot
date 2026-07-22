@@ -273,7 +273,8 @@ async def _adm_stats_inner(call: CallbackQuery):
 
     top_text = ""
     for i, r in enumerate(top_lessons, 1):
-        top_text += f"  {i}. {r['name']} — {r['lessons_completed']} ур. ({r['average_score']:.0f}%)\n"
+        avg_sc = r['average_score'] or 0
+        top_text += f"  {i}. {r['name']} — {r['lessons_completed']} ур. ({avg_sc:.0f}%)\n"
 
     sd = dict(score_dist[0]) if score_dist else {}
     text = (
@@ -321,10 +322,7 @@ async def adm_lesson_detail(call: CallbackQuery):
     kb = InlineKeyboardMarkup(inline_keyboard=[[
         InlineKeyboardButton(text="🔙 К списку", callback_data="adm:lessons_page:0")
     ]])
-    try:
-        await call.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
-    except Exception:
-        await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
+    await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
     await call.answer()
 
 # ══════════════════════════════════════════
