@@ -213,7 +213,11 @@ async def adm_user_detail(call: CallbackQuery):
         [InlineKeyboardButton(text="📢 Написать пользователю", callback_data=f"adm:msg_user:{tg_id}")],
         [InlineKeyboardButton(text="🔙 Назад", callback_data="adm:users")],
     ])
-    await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
+    try:
+        await call.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
+    except Exception:
+        await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
+    await call.answer()
 
 @router.callback_query(F.data.startswith("adm:msg_user:"))
 async def adm_msg_user_start(call: CallbackQuery, state: FSMContext):
@@ -301,7 +305,9 @@ async def _adm_stats_inner(call: CallbackQuery):
         [InlineKeyboardButton(text="🔙 Назад",    callback_data="adm:menu")],
     ])
     try:
-        await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
+        await call.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
+    except Exception:
+        pass
     await call.answer()
 
 # ══════════════════════════════════════════
@@ -312,7 +318,11 @@ async def adm_lessons_list(call: CallbackQuery):
     page = int(call.data.split(":")[2])
     lessons = get_all_lessons()
     text = f"📚 <b>Все уроки</b>\nВсего: <b>{len(lessons)}</b>"
-    await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
+    try:
+        await call.message.edit_text(text, parse_mode="HTML", reply_markup=lessons_list_keyboard(page))
+    except Exception:
+        await call.message.answer(text, parse_mode="HTML", reply_markup=lessons_list_keyboard(page))
+    await call.answer()
 
 @router.callback_query(F.data.startswith("adm:lesson_detail:"))
 async def adm_lesson_detail(call: CallbackQuery):
