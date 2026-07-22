@@ -305,9 +305,7 @@ async def _adm_stats_inner(call: CallbackQuery):
         [InlineKeyboardButton(text="🔙 Назад",    callback_data="adm:menu")],
     ])
     try:
-        await call.message.edit_text(text, parse_mode="HTML", reply_markup=kb)
-    except Exception:
-        pass
+        await call.message.answer(text, parse_mode="HTML", reply_markup=kb)
     await call.answer()
 
 # ══════════════════════════════════════════
